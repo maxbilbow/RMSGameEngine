@@ -12,20 +12,24 @@
 	<dict>
 		<key>2B339A9C24BE45B472F1EB58BBFD8DE7AD418995</key>
 		<string>https://github.com/maxbilbow/RattleGL.git</string>
+		<key>EE17316F92BB589165692279D8E69E7A5BC7D3AA</key>
+		<string>https://github.com/maxbilbow/RMSGameEngine.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>RattleGLS/RattleGL.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2B339A9C24BE45B472F1EB58BBFD8DE7AD418995</key>
+		<string>../../../../RattleGL</string>
+		<key>EE17316F92BB589165692279D8E69E7A5BC7D3AA</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/maxbilbow/RattleGL.git</string>
+	<string>https://github.com/maxbilbow/RMSGameEngine.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2B339A9C24BE45B472F1EB58BBFD8DE7AD418995</string>
+	<string>EE17316F92BB589165692279D8E69E7A5BC7D3AA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>2B339A9C24BE45B472F1EB58BBFD8DE7AD418995</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RattleGL</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE17316F92BB589165692279D8E69E7A5BC7D3AA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RMXSwiftPhysics</string>
 		</dict>
 	</array>
 </dict>
