@@ -10,8 +10,9 @@
 #import <Foundation/Foundation.h>
 #import <GLKit/GLKit.h>
 #import <complex.h>
-#import <math.h>
 
+#import <math.h>
+#import <SceneKit/SceneKit.h>
 #import "RMXMaths.h"
 
 

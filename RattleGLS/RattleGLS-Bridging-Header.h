@@ -8,13 +8,13 @@
 //@import OpenGL;
 
 
-
-#ifdef _WIN32
-#	include <windows.h>
-#else
-#	include <sys/time.h>
-#endif
-
+//
+//#ifdef _WIN32
+//#	include <windows.h>
+//#else
+//#	include <sys/time.h>
+//#endif
+//
 //Swift
 //@class world;
 
@@ -25,7 +25,7 @@
 
 //#import "RattleGL3-0-Swift.h"
 
-#import <SceneKit/SceneKit.h>
+
 #import "RMXMaths.h"
 #import "RMXEquations.h"
 #import "RMXShapes.h"

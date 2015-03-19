@@ -13,27 +13,10 @@
 #endif
 
 
-#include <SceneKit/SceneKit.h>
-
+#import <SceneKit/SceneKit.h>
 #define PI                      3.14159265358979323846
 #define PI_OVER_180             (PI / 180)
 #define RMX_INFINITY            9999
-
-#if defined(__STRICT_ANSI__)
-struct _RMXVector2
-{
-    float v[3];
-};
-typedef struct _RMXVector2 RMXVector2;
-#else
-union _RMXVector2
-{
-    struct { float x, y; };
-    struct { float theta, phi; };
-    float v[2];
-};
-typedef union _RMXVector2 RMXVector2;
-#endif
 
 typedef GLKVector3 RMXVector3;
 typedef GLKMatrix3 RMXMatrix3;

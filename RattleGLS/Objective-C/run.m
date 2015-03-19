@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Rattle Media. All rights reserved.
 //
 
-#import "RattleGLS-Bridging-Header.h"
+//#import "RattleGLS-Bridging-Header.h"
 #import <RattleGL-Swift.h>
 #import "RMXMouseProcessor.h"
 #import "RMXKeyboardProcessor.h"
@@ -80,6 +80,7 @@ void idle(){
 
 int RMXRun(int argc, char * argv[])
 {
+    NSLog(@"Hello");
     RMXGlutInit(argc,argv);
     initKeys();
     

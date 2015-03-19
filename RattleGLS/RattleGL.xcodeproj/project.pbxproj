@@ -44,6 +44,8 @@
 		505DC5A61AB0A920006CC4A9 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9AF1AAE455600B5F1B3 /* RMXEquations.m */; };
 		505DC5A71AB0A920006CC4A9 /* RMXMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9B11AAE455600B5F1B3 /* RMXMaths.m */; };
 		508AB5D71AB7B4D200B95AF8 /* RMXKeyboardProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B50881A9E7B7400B140D7 /* RMXKeyboardProcessor.m */; };
+		50D971931ABA51BB00CB7285 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505DD5A91AAF5B3D008FFB84 /* GLKit.framework */; };
+		50D971941ABA51C400CB7285 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503203D31AB0A719000DD1FE /* SceneKit.framework */; };
 		50E6B9B21AAE455600B5F1B3 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9AF1AAE455600B5F1B3 /* RMXEquations.m */; };
 		50E6B9B31AAE455600B5F1B3 /* RMXMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9B11AAE455600B5F1B3 /* RMXMaths.m */; };
 		50F885591ABA337C0021B9C8 /* RMSArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885481ABA337C0021B9C8 /* RMSArt.swift */; };
@@ -195,6 +197,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50D971941ABA51C400CB7285 /* SceneKit.framework in Frameworks */,
+				50D971931ABA51BB00CB7285 /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,7 +985,7 @@
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = RattleGLS;
-				SWIFT_OBJC_BRIDGING_HEADER = "RattleGLS/RattleGLS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RattleGLS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -994,7 +998,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = RattleGLS;
-				SWIFT_OBJC_BRIDGING_HEADER = "RattleGLS/RattleGLS-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RattleGLS-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -1130,6 +1134,7 @@
 				501204291ABA43E500F4C075 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5012042A1ABA43E500F4C075 /* Build configuration list for PBXNativeTarget "RMXPhysicsBetaTests" */ = {
 			isa = XCConfigurationList;
@@ -1138,6 +1143,7 @@
 				5012042C1ABA43E500F4C075 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5012044A1ABA44C200F4C075 /* Build configuration list for PBXNativeTarget "Rattle Physics Beta" */ = {
 			isa = XCConfigurationList;
@@ -1146,6 +1152,7 @@
 				5012044C1ABA44C200F4C075 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5012044D1ABA44C200F4C075 /* Build configuration list for PBXNativeTarget "Rattle Physics BetaTests" */ = {
 			isa = XCConfigurationList;
@@ -1154,6 +1161,7 @@
 				5012044F1ABA44C200F4C075 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		503203DD1AB0A821000DD1FE /* Build configuration list for PBXNativeTarget "RattleGLS" */ = {
 			isa = XCConfigurationList;

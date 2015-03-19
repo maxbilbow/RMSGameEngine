@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Rattle Media. All rights reserved.
 //
 
-import SceneKit
+
 
 @objc public class RMSPhysicsBody {
     

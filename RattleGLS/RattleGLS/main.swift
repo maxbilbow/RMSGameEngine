@@ -7,7 +7,7 @@
 //
 
 import Foundation
-let rmxDebugger = RMXDebugger()
+//let rmxDebugger = RMXDebugger()
 
 //@objc public class world {
 //    static let thisWorld: RMXWorld = RMXArt.initializeTestingEnvironment()
@@ -53,7 +53,7 @@ func start() {
             
         }
         RMXGLProxy.initialize(scene,callbacks: RepeatedKeys)
-        run(Process.argc, Process.unsafeArgv)
+        RMXRun(Process.argc, Process.unsafeArgv)
     
         
     }

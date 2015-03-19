@@ -5,10 +5,10 @@
 //  Created by Max Bilbow on 11/03/2015.
 //  Copyright (c) 2015 Rattle Media. All rights reserved.
 //
-
-#import <GLUT/GLUT.h>
-#import <GLKit/GLKit.h>
-#import <SceneKit/SceneKit.h>
+//
+//#import <GLUT/GLUT.h>
+//#import <GLKit/GLKit.h>
+//#import <SceneKit/SceneKit.h>
 #import "RMXMaths.h"
 #import <RattleGL-Swift.h>
 #import "cStuff.h"
