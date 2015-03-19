@@ -88,7 +88,6 @@ public protocol RMXGLView  {
         // Make sure changes appear onscreen
         RMXGlutSwapBuffers()
         glFlush()
-        debug()
         //tester.checks[1] = observer->toString();
         //NSLog([world.observer viewDescription]);
     }

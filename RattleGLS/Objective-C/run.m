@@ -78,7 +78,7 @@ void idle(){
     [RMXGLProxy animateScene];
 }
 
-int run(int argc, char * argv[])
+int RMXRun(int argc, char * argv[])
 {
     RMXGlutInit(argc,argv);
     initKeys();
@@ -133,13 +133,5 @@ int run(int argc, char * argv[])
     glutMainLoop();
     return 0;
 }
-
-
-void debug(){
-//    [world.observer.item debug];
-//    [world.observer debug];
-    //[rmxDebugger feedback];
-};
-
 
 

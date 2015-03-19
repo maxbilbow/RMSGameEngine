@@ -7,8 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5008DA5C1AB9F34E00565A28 /* RattleGLESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008DA5B1AB9F34E00565A28 /* RattleGLESTests.swift */; };
-		5008DA9F1AB9FA8900565A28 /* RMXValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008DA9C1AB9FA8400565A28 /* RMXValue.swift */; };
+		501204361ABA44C200F4C075 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501204351ABA44C200F4C075 /* AppDelegate.swift */; };
+		501204381ABA44C200F4C075 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501204371ABA44C200F4C075 /* ViewController.swift */; };
+		5012043A1ABA44C200F4C075 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501204391ABA44C200F4C075 /* Images.xcassets */; };
+		5012043D1ABA44C200F4C075 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5012043B1ABA44C200F4C075 /* Main.storyboard */; };
+		501204491ABA44C200F4C075 /* Rattle_Physics_BetaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501204481ABA44C200F4C075 /* Rattle_Physics_BetaTests.swift */; };
+		501204501ABA450800F4C075 /* RMXShapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F8856D1ABA33CB0021B9C8 /* RMXShapes.m */; };
+		501204511ABA450800F4C075 /* run.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F8856A1ABA339F0021B9C8 /* run.m */; };
+		501204521ABA450800F4C075 /* RMXKeyboardProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B50881A9E7B7400B140D7 /* RMXKeyboardProcessor.m */; };
+		501204531ABA450800F4C075 /* RMXMouseProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B508C1A9E7B7400B140D7 /* RMXMouseProcessor.m */; };
+		501204541ABA450800F4C075 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9AF1AAE455600B5F1B3 /* RMXEquations.m */; };
+		501204551ABA450800F4C075 /* RMXMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9B11AAE455600B5F1B3 /* RMXMaths.m */; };
+		501204561ABA450800F4C075 /* cStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 503203E21AB0A8A9000DD1FE /* cStuff.m */; };
+		501204571ABA451400F4C075 /* RMSArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885481ABA337C0021B9C8 /* RMSArt.swift */; };
+		501204581ABA451400F4C075 /* RMSMaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885491ABA337C0021B9C8 /* RMSMaths.swift */; };
+		501204591ABA451400F4C075 /* RMSParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854A1ABA337C0021B9C8 /* RMSParticle.swift */; };
+		5012045A1ABA451400F4C075 /* RMSPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854B1ABA337C0021B9C8 /* RMSPhysicsBody.swift */; };
+		5012045B1ABA451400F4C075 /* RMSWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854C1ABA337C0021B9C8 /* RMSWorld.swift */; };
+		5012045C1ABA451400F4C075 /* RMX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854D1ABA337C0021B9C8 /* RMX.swift */; };
+		5012045D1ABA451400F4C075 /* RMXCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854E1ABA337C0021B9C8 /* RMXCamera.swift */; };
+		5012045E1ABA451400F4C075 /* RMXDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854F1ABA337C0021B9C8 /* RMXDebugger.swift */; };
+		5012045F1ABA451400F4C075 /* RMXGLut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885501ABA337C0021B9C8 /* RMXGLut.swift */; };
+		501204601ABA451400F4C075 /* RMXMouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885521ABA337C0021B9C8 /* RMXMouse.swift */; };
+		501204611ABA451400F4C075 /* RMXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885531ABA337C0021B9C8 /* RMXObject.swift */; };
+		501204621ABA451400F4C075 /* RMXPhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885551ABA337C0021B9C8 /* RMXPhysics.swift */; };
+		501204631ABA451400F4C075 /* RMXShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885561ABA337C0021B9C8 /* RMXShape.swift */; };
+		501204641ABA451400F4C075 /* RMXSpriteActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885571ABA337C0021B9C8 /* RMXSpriteActions.swift */; };
+		5012046B1ABA47AA00F4C075 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505DD5A91AAF5B3D008FFB84 /* GLKit.framework */; };
 		50183D411AAE2E8900FF2A26 /* RMXMouseProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B508C1A9E7B7400B140D7 /* RMXMouseProcessor.m */; };
 		503203D21AB0A4B4000DD1FE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505DD5A91AAF5B3D008FFB84 /* GLKit.framework */; };
 		503203D41AB0A719000DD1FE /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503203D31AB0A719000DD1FE /* SceneKit.framework */; };
@@ -47,6 +72,20 @@
 			remoteGlobalIDString = 5008DA3C1AB9F34E00565A28;
 			remoteInfo = RattleGLES;
 		};
+		501204201ABA43E500F4C075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C7B50681A9E7B2E00B140D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 501204091ABA43E500F4C075;
+			remoteInfo = RMXPhysicsBeta;
+		};
+		501204431ABA44C200F4C075 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C7B50681A9E7B2E00B140D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 501204301ABA44C200F4C075;
+			remoteInfo = "Rattle Physics Beta";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,18 +111,24 @@
 
 /* Begin PBXFileReference section */
 		5008DA3D1AB9F34E00565A28 /* RattleGLES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RattleGLES.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5008DA401AB9F34E00565A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5008DA551AB9F34E00565A28 /* RattleGLESTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RattleGLESTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5008DA5A1AB9F34E00565A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5008DA5B1AB9F34E00565A28 /* RattleGLESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RattleGLESTests.swift; sourceTree = "<group>"; };
-		5008DA9B1AB9FA8400565A28 /* RMXDPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXDPad.swift; path = ../RattleGLS/RMXDPad.swift; sourceTree = "<group>"; };
-		5008DA9C1AB9FA8400565A28 /* RMXValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXValue.swift; path = ../RattleGLS/RMXValue.swift; sourceTree = "<group>"; };
 		5008DAA01AB9FC8D00565A28 /* RMSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSViewController.swift; sourceTree = "<group>"; };
+		5012040A1ABA43E500F4C075 /* RMXPhysicsBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMXPhysicsBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5012041F1ABA43E500F4C075 /* RMXPhysicsBetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMXPhysicsBetaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		501204311ABA44C200F4C075 /* Rattle Physics Beta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rattle Physics Beta.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		501204341ABA44C200F4C075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		501204351ABA44C200F4C075 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		501204371ABA44C200F4C075 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		501204391ABA44C200F4C075 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5012043C1ABA44C200F4C075 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		501204421ABA44C200F4C075 /* Rattle Physics BetaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rattle Physics BetaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		501204471ABA44C200F4C075 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		501204481ABA44C200F4C075 /* Rattle_Physics_BetaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rattle_Physics_BetaTests.swift; sourceTree = "<group>"; };
+		5012046C1ABA49AD00F4C075 /* RattleGLS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RattleGLS-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		50183D421AAE2E8E00FF2A26 /* RMXMouseProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMXMouseProcessor.h; path = "../Objective-C/RMXMouseProcessor.h"; sourceTree = "<group>"; };
 		503203D31AB0A719000DD1FE /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		503203D91AB0A821000DD1FE /* RattleGLS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RattleGLS; sourceTree = BUILT_PRODUCTS_DIR; };
 		503203DB1AB0A821000DD1FE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		503203E11AB0A8A9000DD1FE /* RattleGLS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RattleGLS-Bridging-Header.h"; sourceTree = "<group>"; };
 		503203E21AB0A8A9000DD1FE /* cStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cStuff.m; path = ../RattleGLS/cStuff.m; sourceTree = "<group>"; };
 		503203E31AB0A8A9000DD1FE /* cStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cStuff.h; path = ../RattleGLS/cStuff.h; sourceTree = "<group>"; };
 		505DD5A91AAF5B3D008FFB84 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -131,6 +176,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		501204071ABA43E500F4C075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5012046B1ABA47AA00F4C075 /* GLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012041C1ABA43E500F4C075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012042E1ABA44C200F4C075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012043F1ABA44C200F4C075 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		503203D61AB0A821000DD1FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,37 +224,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5008DA3E1AB9F34E00565A28 /* RattleGLES */ = {
+		501204321ABA44C200F4C075 /* Rattle Physics Beta */ = {
 			isa = PBXGroup;
 			children = (
-				5008DA9B1AB9FA8400565A28 /* RMXDPad.swift */,
-				5008DA9C1AB9FA8400565A28 /* RMXValue.swift */,
-				5008DA3F1AB9F34E00565A28 /* Supporting Files */,
+				501204351ABA44C200F4C075 /* AppDelegate.swift */,
+				501204371ABA44C200F4C075 /* ViewController.swift */,
+				501204391ABA44C200F4C075 /* Images.xcassets */,
+				5012043B1ABA44C200F4C075 /* Main.storyboard */,
+				501204331ABA44C200F4C075 /* Supporting Files */,
 			);
-			path = RattleGLES;
+			path = "Rattle Physics Beta";
 			sourceTree = "<group>";
 		};
-		5008DA3F1AB9F34E00565A28 /* Supporting Files */ = {
+		501204331ABA44C200F4C075 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5008DA401AB9F34E00565A28 /* Info.plist */,
+				501204341ABA44C200F4C075 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5008DA581AB9F34E00565A28 /* RattleGLESTests */ = {
+		501204451ABA44C200F4C075 /* Rattle Physics BetaTests */ = {
 			isa = PBXGroup;
 			children = (
-				5008DA5B1AB9F34E00565A28 /* RattleGLESTests.swift */,
-				5008DA591AB9F34E00565A28 /* Supporting Files */,
+				501204481ABA44C200F4C075 /* Rattle_Physics_BetaTests.swift */,
+				501204461ABA44C200F4C075 /* Supporting Files */,
 			);
-			path = RattleGLESTests;
+			path = "Rattle Physics BetaTests";
 			sourceTree = "<group>";
 		};
-		5008DA591AB9F34E00565A28 /* Supporting Files */ = {
+		501204461ABA44C200F4C075 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5008DA5A1AB9F34E00565A28 /* Info.plist */,
+				501204471ABA44C200F4C075 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -190,7 +266,7 @@
 			children = (
 				503203DB1AB0A821000DD1FE /* main.swift */,
 				5008DAA01AB9FC8D00565A28 /* RMSViewController.swift */,
-				503203E11AB0A8A9000DD1FE /* RattleGLS-Bridging-Header.h */,
+				5012046C1ABA49AD00F4C075 /* RattleGLS-Bridging-Header.h */,
 			);
 			path = RattleGLS;
 			sourceTree = "<group>";
@@ -203,8 +279,8 @@
 				6C7B507F1A9E7B7400B140D7 /* Swift */,
 				6C7B507A1A9E7B7400B140D7 /* Objc */,
 				503203DA1AB0A821000DD1FE /* RattleGLS */,
-				5008DA3E1AB9F34E00565A28 /* RattleGLES */,
-				5008DA581AB9F34E00565A28 /* RattleGLESTests */,
+				501204321ABA44C200F4C075 /* Rattle Physics Beta */,
+				501204451ABA44C200F4C075 /* Rattle Physics BetaTests */,
 				6C7B50711A9E7B2E00B140D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -216,6 +292,10 @@
 				503203D91AB0A821000DD1FE /* RattleGLS */,
 				5008DA3D1AB9F34E00565A28 /* RattleGLES.app */,
 				5008DA551AB9F34E00565A28 /* RattleGLESTests.xctest */,
+				5012040A1ABA43E500F4C075 /* RMXPhysicsBeta.app */,
+				5012041F1ABA43E500F4C075 /* RMXPhysicsBetaTests.xctest */,
+				501204311ABA44C200F4C075 /* Rattle Physics Beta.app */,
+				501204421ABA44C200F4C075 /* Rattle Physics BetaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -303,6 +383,76 @@
 			productReference = 5008DA551AB9F34E00565A28 /* RattleGLESTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		501204091ABA43E500F4C075 /* RMXPhysicsBeta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 501204271ABA43E500F4C075 /* Build configuration list for PBXNativeTarget "RMXPhysicsBeta" */;
+			buildPhases = (
+				501204061ABA43E500F4C075 /* Sources */,
+				501204071ABA43E500F4C075 /* Frameworks */,
+				501204081ABA43E500F4C075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RMXPhysicsBeta;
+			productName = RMXPhysicsBeta;
+			productReference = 5012040A1ABA43E500F4C075 /* RMXPhysicsBeta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5012041E1ABA43E500F4C075 /* RMXPhysicsBetaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5012042A1ABA43E500F4C075 /* Build configuration list for PBXNativeTarget "RMXPhysicsBetaTests" */;
+			buildPhases = (
+				5012041B1ABA43E500F4C075 /* Sources */,
+				5012041C1ABA43E500F4C075 /* Frameworks */,
+				5012041D1ABA43E500F4C075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				501204211ABA43E500F4C075 /* PBXTargetDependency */,
+			);
+			name = RMXPhysicsBetaTests;
+			productName = RMXPhysicsBetaTests;
+			productReference = 5012041F1ABA43E500F4C075 /* RMXPhysicsBetaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		501204301ABA44C200F4C075 /* Rattle Physics Beta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5012044A1ABA44C200F4C075 /* Build configuration list for PBXNativeTarget "Rattle Physics Beta" */;
+			buildPhases = (
+				5012042D1ABA44C200F4C075 /* Sources */,
+				5012042E1ABA44C200F4C075 /* Frameworks */,
+				5012042F1ABA44C200F4C075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rattle Physics Beta";
+			productName = "Rattle Physics Beta";
+			productReference = 501204311ABA44C200F4C075 /* Rattle Physics Beta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		501204411ABA44C200F4C075 /* Rattle Physics BetaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5012044D1ABA44C200F4C075 /* Build configuration list for PBXNativeTarget "Rattle Physics BetaTests" */;
+			buildPhases = (
+				5012043E1ABA44C200F4C075 /* Sources */,
+				5012043F1ABA44C200F4C075 /* Frameworks */,
+				501204401ABA44C200F4C075 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				501204441ABA44C200F4C075 /* PBXTargetDependency */,
+			);
+			name = "Rattle Physics BetaTests";
+			productName = "Rattle Physics BetaTests";
+			productReference = 501204421ABA44C200F4C075 /* Rattle Physics BetaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		503203D81AB0A821000DD1FE /* RattleGLS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 503203DD1AB0A821000DD1FE /* Build configuration list for PBXNativeTarget "RattleGLS" */;
@@ -353,6 +503,20 @@
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 5008DA3C1AB9F34E00565A28;
 					};
+					501204091ABA43E500F4C075 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					5012041E1ABA43E500F4C075 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 501204091ABA43E500F4C075;
+					};
+					501204301ABA44C200F4C075 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					501204411ABA44C200F4C075 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 501204301ABA44C200F4C075;
+					};
 					503203D81AB0A821000DD1FE = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -378,6 +542,10 @@
 				503203D81AB0A821000DD1FE /* RattleGLS */,
 				5008DA3C1AB9F34E00565A28 /* RattleGLES */,
 				5008DA541AB9F34E00565A28 /* RattleGLESTests */,
+				501204091ABA43E500F4C075 /* RMXPhysicsBeta */,
+				5012041E1ABA43E500F4C075 /* RMXPhysicsBetaTests */,
+				501204301ABA44C200F4C075 /* Rattle Physics Beta */,
+				501204411ABA44C200F4C075 /* Rattle Physics BetaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,6 +565,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		501204081ABA43E500F4C075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012041D1ABA43E500F4C075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012042F1ABA44C200F4C075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5012043A1ABA44C200F4C075 /* Images.xcassets in Resources */,
+				5012043D1ABA44C200F4C075 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501204401ABA44C200F4C075 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -404,7 +602,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5008DA9F1AB9FA8900565A28 /* RMXValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +609,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5008DA5C1AB9F34E00565A28 /* RattleGLESTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		501204061ABA43E500F4C075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012041B1ABA43E500F4C075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012042D1ABA44C200F4C075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501204581ABA451400F4C075 /* RMSMaths.swift in Sources */,
+				5012045B1ABA451400F4C075 /* RMSWorld.swift in Sources */,
+				501204531ABA450800F4C075 /* RMXMouseProcessor.m in Sources */,
+				501204551ABA450800F4C075 /* RMXMaths.m in Sources */,
+				501204621ABA451400F4C075 /* RMXPhysics.swift in Sources */,
+				501204631ABA451400F4C075 /* RMXShape.swift in Sources */,
+				501204571ABA451400F4C075 /* RMSArt.swift in Sources */,
+				501204541ABA450800F4C075 /* RMXEquations.m in Sources */,
+				501204601ABA451400F4C075 /* RMXMouse.swift in Sources */,
+				501204381ABA44C200F4C075 /* ViewController.swift in Sources */,
+				501204611ABA451400F4C075 /* RMXObject.swift in Sources */,
+				501204511ABA450800F4C075 /* run.m in Sources */,
+				501204501ABA450800F4C075 /* RMXShapes.m in Sources */,
+				501204521ABA450800F4C075 /* RMXKeyboardProcessor.m in Sources */,
+				5012045D1ABA451400F4C075 /* RMXCamera.swift in Sources */,
+				5012045A1ABA451400F4C075 /* RMSPhysicsBody.swift in Sources */,
+				501204561ABA450800F4C075 /* cStuff.m in Sources */,
+				501204641ABA451400F4C075 /* RMXSpriteActions.swift in Sources */,
+				5012045F1ABA451400F4C075 /* RMXGLut.swift in Sources */,
+				501204591ABA451400F4C075 /* RMSParticle.swift in Sources */,
+				501204361ABA44C200F4C075 /* AppDelegate.swift in Sources */,
+				5012045C1ABA451400F4C075 /* RMX.swift in Sources */,
+				5012045E1ABA451400F4C075 /* RMXDebugger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5012043E1ABA44C200F4C075 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				501204491ABA44C200F4C075 /* Rattle_Physics_BetaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +712,28 @@
 			target = 5008DA3C1AB9F34E00565A28 /* RattleGLES */;
 			targetProxy = 5008DA561AB9F34E00565A28 /* PBXContainerItemProxy */;
 		};
+		501204211ABA43E500F4C075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 501204091ABA43E500F4C075 /* RMXPhysicsBeta */;
+			targetProxy = 501204201ABA43E500F4C075 /* PBXContainerItemProxy */;
+		};
+		501204441ABA44C200F4C075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 501204301ABA44C200F4C075 /* Rattle Physics Beta */;
+			targetProxy = 501204431ABA44C200F4C075 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5012043B1ABA44C200F4C075 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5012043C1ABA44C200F4C075 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5008DA5E1AB9F34E00565A28 /* Debug */ = {
@@ -545,6 +814,158 @@
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RattleGLES.app/RattleGLES";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		501204281ABA43E500F4C075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RMXPhysicsBeta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		501204291ABA43E500F4C075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = RMXPhysicsBeta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+		5012042B1ABA43E500F4C075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RMXPhysicsBetaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/OptimizationProfiles/RattleGLS-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMXPhysicsBeta.app/Contents/MacOS/RMXPhysicsBeta";
+			};
+			name = Debug;
+		};
+		5012042C1ABA43E500F4C075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = RMXPhysicsBetaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/OptimizationProfiles/RattleGLS-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMXPhysicsBeta.app/Contents/MacOS/RMXPhysicsBeta";
+			};
+			name = Release;
+		};
+		5012044B1ABA44C200F4C075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rattle Physics Beta/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RattleGLS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5012044C1ABA44C200F4C075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Rattle Physics Beta/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RattleGLS-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		5012044E1ABA44C200F4C075 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Rattle Physics BetaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rattle Physics Beta.app/Contents/MacOS/Rattle Physics Beta";
+			};
+			name = Debug;
+		};
+		5012044F1ABA44C200F4C075 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Rattle Physics BetaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rattle Physics Beta.app/Contents/MacOS/Rattle Physics Beta";
 			};
 			name = Release;
 		};
@@ -673,6 +1094,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_MODULE_NAME = RattleGL;
 				PRODUCT_NAME = RattleGL;
 				SWIFT_OBJC_BRIDGING_HEADER = "RattleGLS-Bridging-Header.h";
@@ -700,6 +1122,38 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		501204271ABA43E500F4C075 /* Build configuration list for PBXNativeTarget "RMXPhysicsBeta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				501204281ABA43E500F4C075 /* Debug */,
+				501204291ABA43E500F4C075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5012042A1ABA43E500F4C075 /* Build configuration list for PBXNativeTarget "RMXPhysicsBetaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5012042B1ABA43E500F4C075 /* Debug */,
+				5012042C1ABA43E500F4C075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5012044A1ABA44C200F4C075 /* Build configuration list for PBXNativeTarget "Rattle Physics Beta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5012044B1ABA44C200F4C075 /* Debug */,
+				5012044C1ABA44C200F4C075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5012044D1ABA44C200F4C075 /* Build configuration list for PBXNativeTarget "Rattle Physics BetaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5012044E1ABA44C200F4C075 /* Debug */,
+				5012044F1ABA44C200F4C075 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		503203DD1AB0A821000DD1FE /* Build configuration list for PBXNativeTarget "RattleGLS" */ = {
 			isa = XCConfigurationList;

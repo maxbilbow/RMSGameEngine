@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RMXPhysicsBeta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Rattle Physics Beta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>RattleGL3.0.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +38,26 @@
 			<true/>
 		</dict>
 		<key>5008DA541AB9F34E00565A28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>501204091ABA43E500F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5012041E1ABA43E500F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>501204301ABA44C200F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>501204411ABA44C200F4C075</key>
 		<dict>
 			<key>primary</key>
 			<true/>

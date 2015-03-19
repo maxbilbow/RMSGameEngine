@@ -12,9 +12,4 @@
 
 #endif
 
-
-//void InitGraphics(void);
-//int init();
-void debug();
-int run(int argc, char * argv[]);
-//RMXWorld * world;
+int RMXRun(int argc, char * argv[]);
