@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Rattle Media. All rights reserved.
 //
 
-//import Cocoa
+import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        
         
     }
 

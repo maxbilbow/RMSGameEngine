@@ -91,12 +91,10 @@ int RMXRun(int argc, char * argv[])
     if (RMX.isFullscreen){//&&glutGameModeGet(GLUT_GAME_MODE_POSSIBLE)){
         RMXGlutEnterGameMode();
     }else {
-        //NSLog("Game Mode Not Possibe, Exit: \(glutGameModeGet(GLUT_GAME_MODE_POSSIBLE))")
+        NSLog(@"Game Mode Not Possibe");
         RMXGlutMakeWindow(100,100,1280,720,"Window");
     }
     //Setup Display:
-    //[window display:display rs:reshape];
-
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
     
@@ -111,19 +109,10 @@ int RMXRun(int argc, char * argv[])
     glutPassiveMotionFunc(mouseFree);
     
     //Animation
-    // [window idle:AnimateScene];
     glutIdleFunc(idle);
     
-    // Create our popup menu
-    //BuildPopupMenu();
     InitGraphics();
-    //glutAttachMenu (GLUT_RIGHT_BUTTON);
-    // Get the initial time, for use by animation
-
-    //gettimeofday (&last_idle_time, NULL);
-
     
-    //[mouse center];
     
     if (RMX.isFullscreen) {
         [RMXGLProxy.activeSprite.mouse toggleFocus];

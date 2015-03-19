@@ -98,5 +98,7 @@ public protocol RMXGLView  {
 
 
 extension RMXGLProxy {
-    
+    class func run(){
+        RMXRun(Process.argc, Process.unsafeArgv)
+    }
 }
