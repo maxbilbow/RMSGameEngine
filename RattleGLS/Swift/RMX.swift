@@ -9,8 +9,8 @@
 import Foundation
 
 @objc public class RMX {
-    static let isDebugging: Bool = true
-    static let isFullscreen: Bool = false
+    static let isDebugging: Bool = false
+    static let isFullscreen: Bool = true
     static let usingDepreciated: Bool = true
     
 }

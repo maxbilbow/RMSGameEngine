@@ -81,6 +81,7 @@ void idle(){
 int RMXRun(int argc, char * argv[])
 {
     NSLog(@"Hello");
+    
     RMXGlutInit(argc,argv);
     initKeys();
     
