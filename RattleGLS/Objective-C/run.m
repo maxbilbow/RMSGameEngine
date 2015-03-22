@@ -78,6 +78,9 @@ void idle(){
     [RMXGLProxy animateScene];
 }
 
+
+#ifdef RMX_USE_DEPRECIATED
+
 int RMXRun(int argc, char * argv[])
 {
     NSLog(@"Hello");
@@ -124,5 +127,10 @@ int RMXRun(int argc, char * argv[])
     glutMainLoop();
     return 0;
 }
+#else
+int RMXRun(int argc, char * argv[]){
+    NSLog(@"RUN should not be called, bitches!");
+    return 0;
+}
 
-
+#endif

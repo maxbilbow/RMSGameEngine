@@ -5,7 +5,7 @@
 @import Foundation;
 @import GLUT;
 @import GLKit;
-//@import OpenGL;
+@import OpenGL;
 
 
 //
@@ -56,4 +56,5 @@
 //#import "RMXDisplayProcessor.h"
 #import "RMXKeyboardProcessor.h"
 #import "run.h"
+//#import "SSGameSceneController.h"
 

@@ -9,12 +9,13 @@
 import Foundation
 
 
-public class RMXWorld : RMSParticle, RMXGLView {
+ public class RMXWorld : RMSParticle, RMXGLView {
 //    let _g: Float = 0.01/50
 //    let _f: Float = 1.1
+    lazy var action: RMSActionProcessor = RMSActionProcessor(world: self)
     private let GRAVITY: Float = 9.8
     var sprites: [RMSParticle]
-    var observer: RMSParticle?
+    lazy var observer: RMSParticle = RMSParticle(world: self, parent: self).setAsObserver()
     override var physics: RMXPhysics? {
         return self.worldPhysics
     }
@@ -23,20 +24,21 @@ public class RMXWorld : RMSParticle, RMXGLView {
         return self.observer
     }
     public var activeCamera: RMXCamera? {
-        return observer?.camera
+        return observer.camera
     }
    
     
     init(parent: RMXObject! = nil, name: String = "The World", capacity: Int = 15000) {
         self.sprites = Array<RMSParticle>()
         self.sprites.reserveCapacity(capacity)
-        super.init(world: nil, parent: parent)
-        self.body.radius = 1000
+        
+        super.init(world: nil, parent: parent, name: name)
+        self.body.radius = 50
 
-        self.observer = RMSParticle(world: self, parent: self).setAsObserver()
+        
         self.camera = RMXCamera(world: self, pov: observer)
         
-        self.sprites.append(self.observer!)
+        self.sprites.append(self.observer)
         //fatalError("Grav: \(self.physics.gravity)")
          self.isAnimated = false
     }
@@ -112,7 +114,7 @@ public class RMXWorld : RMSParticle, RMXGLView {
     }
     
     func resetWorld() {
-        self.observer?.reset()//->body.position = GLKVector3Make(0,0,0);
+        self.observer.reset()//->body.position = GLKVector3Make(0,0,0);
             //self.observer->body.velocity = GLKVector3Make(0,0,0);
     }
     
@@ -136,19 +138,20 @@ public class RMXWorld : RMSParticle, RMXGLView {
     }
     
   
-        
-    func applyGravity(hasGrav: Bool) {
+    //private var _hasGravity = false
+    override func toggleGravity() {
         for sprite in sprites {
-            if !(sprite.isLightSource && hasGrav) {
-                sprite.hasGravity = hasGrav
+            if !(sprite.isLightSource) {
+                sprite.hasGravity = self.hasGravity
             }
         }
+        super.toggleGravity()
     }
     
     public func message(function: String, args: AnyObject?...) {
         switch function {
-        case "applyGravity":
-            self.applyGravity(args[0] is Bool ? args[0] as! Bool : false)
+        case "toggleGravity":
+            self.toggleGravity()
             break
         case "resetWorld":
             self.resetWorld()
@@ -163,4 +166,7 @@ public class RMXWorld : RMSParticle, RMXGLView {
         println()
         
     }
+    
+    
+    
 }

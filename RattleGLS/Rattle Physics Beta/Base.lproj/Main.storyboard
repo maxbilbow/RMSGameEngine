@@ -667,7 +667,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="RattleGL" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="RattleGL" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -682,6 +682,9 @@
                                     <action selector="launchGame:" target="XfG-lQ-9wD" id="sS9-xy-kdd"/>
                                 </connections>
                             </button>
+                            <openGLView fixedFrame="YES" useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfh-Dz-RMM">
+                                <rect key="frame" x="0.0" y="0.0" width="487" height="270"/>
+                            </openGLView>
                         </subviews>
                     </view>
                 </viewController>

@@ -72,9 +72,11 @@ import Foundation
             let item: RMSParticle? = self.parent?.world?.closestObjectTo(self.sprite)
             self.setItem(item)
         }
+        if item != nil { RMXLog("HOLDING: \(item!.name)") }
     }
     
     func releaseItem() {
+        if item != nil { RMXLog("DROPPED: \(item!.name)") }
         if self.item != nil {
             self.item!.isAnimated = true //_itemWasAnimated
             self.item!.hasGravity = _itemHadGravity
@@ -82,10 +84,7 @@ import Foundation
         }
     }
     
-    //    var ground: Float {
-    //        return super.ground()
-    //    }
-    
+  
     
     func extendArmLength(i: Float)    {
         if self.armLength + i > 1 {

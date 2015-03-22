@@ -10,6 +10,7 @@ import Foundation
 
 public class RMXDebugger  {
     
+    
     /*
     const bool isDebugging = RMX_DEBUGGING;
     const bool doesDebugLoop = RMX_DEBUGGING;
@@ -121,4 +122,11 @@ public class RMXDebugger  {
     checks[index] = [NSString stringWithFormat:@"%@ %@        %@\n",checks[index],s, text];
 }*/
 
+}
+
+
+public func RMXLog(_ message: AnyObject? = "", sender: AnyObject? = __FUNCTION__, file: AnyObject? = __FILE__){
+    if RMX.isDebugging{
+        println("\(file?.lastPathComponent)::\(sender): \(message)")
+    }
 }

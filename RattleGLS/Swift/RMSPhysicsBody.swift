@@ -48,6 +48,7 @@
     }
     
     func accelerateForward(v: Float) {
+        
         RMXVector3SetZ(&self.acceleration, v * self.parent.accelerationRate)
     }
     

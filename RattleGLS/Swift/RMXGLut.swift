@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 public protocol RMXGLView  {
 //    var effect: GLKBaseEffect? { get set }
 //    var context: GLContext? { get set }
@@ -23,6 +24,9 @@ public protocol RMXGLView  {
     static var callbacks: [()->Void] = Array<()->Void>()
     static var gameView: RMXGLView?
     static var effect: GLKBaseEffect? = GLKBaseEffect()
+    static var activeCamera: RMXCamera? {
+        return self.gameView?.activeCamera
+    }
     static var itemBody: RMSPhysicsBody? {
         return self.activeSprite?.actions?.item?.body
     }
@@ -38,13 +42,14 @@ public protocol RMXGLView  {
         } else {
             fatalError("RMXWorld is nots set")
         }
-        
-        DrawFog();
-        
-        RMXGLPostRedisplay();
+        if RMX.usingDepreciated {
+            DrawFog()
+            RMXGLPostRedisplay()
+        }
     }
     class func initialize(gameView: RMXGLView, callbacks: ()->Void ...){
         self.gameView = gameView
+        self.activeCamera?.effect = self.effect
         for function in callbacks {
             self.callbacks.append(function)
         }
@@ -60,11 +65,18 @@ public protocol RMXGLView  {
     class func reshape(width: Int32, height: Int32) -> Void {
         //[window setSize:width h:height]; //glutGet(GLUT_WINDOW_WIDTH);
         // window.height = height;// glutGet(GLUT_WINDOW_HEIGHT);
-        glViewport(0, 0, width, height)
-        glMatrixMode(GLenum(GL_PROJECTION))
-        glLoadIdentity()
-        self.gameView?.activeCamera?.makePerspective(width, height: height,effect: &self.effect)
-        glMatrixMode(GLenum(GL_MODELVIEW))
+        
+        if RMX.usingDepreciated {
+            glViewport(0, 0, width, height)
+            glMatrixMode(GLenum(GL_PROJECTION))
+            glLoadIdentity()
+            self.gameView?.activeCamera?.makePerspective(width, height: height,effect: &self.effect)
+            glMatrixMode(GLenum(GL_MODELVIEW))
+        } else {
+            self.gameView?.activeCamera!.viewHeight = Float(height)
+            self.gameView?.activeCamera!.viewWidth = Float(width)
+        }
+        
         
     }
 
@@ -76,7 +88,7 @@ public protocol RMXGLView  {
         //[rmxDebugger add:RMX_DISPLAY_PROCESSOR n:@"DisplayProcessor" t:[NSString stringWithFormat:@"r%f, g%f, b%f, k%f",art.r,art.g,art.b,art.k]];
         glLoadIdentity(); // Load the Identity Matrix to reset our drawing locations
         if self.gameView?.activeCamera != nil {
-            self.gameView?.activeCamera?.updateView(&self.effect!)
+            self.gameView?.activeCamera?.updateView()
         } else {
             fatalError("World Camera not initialised")
         }
@@ -101,4 +113,6 @@ extension RMXGLProxy {
     class func run(){
         RMXRun(Process.argc, Process.unsafeArgv)
     }
+    
+
 }

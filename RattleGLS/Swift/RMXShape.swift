@@ -14,6 +14,7 @@ import Foundation
 
 public class RMXShape {
     
+    var node: SCNNode?
     var color: GLKVector4 = GLKVector4Make(0,0,0,0)
     var isLight: Bool = false
     var type, gl_light: Int32
@@ -49,21 +50,28 @@ public class RMXShape {
     
     func draw() {
         if !self.visible { return }
-        
+        if self.node != nil {
+            self.node!.position = SCNVector3FromGLKVector3(self.parent.body.position)
+//            let q = self.parent.camera!.orientation
+//            self.node!.orientation = SCNVector4Make(CGFloat(q.x), CGFloat(q.y), CGFloat(q.z), CGFloat(q.w))
+            let r: CGFloat = CGFloat(self.parent.body.radius)
+            self.node!.scale = SCNVector3(x: r,y: r,z: r)
+            
+        } else if RMX.usingDepreciated {
             if self.isLight {
                 RMXGLShine(self.gl_light, self.type, GLKVector4MakeWithVector3(self.parent.body.position, 1))
             }
-        if self.render != nil {
-            glPushMatrix();
-            RMXGLTranslate(parent.anchor)
-            RMXGLTranslate(parent.body.position)
-            self.setMaterial()
-//            RMXGLRender(self.render, Float(self.parent.body.radius))
-            self.render!(Float(self.parent.body.radius))
-            self.unsetMaterial()
-            glPopMatrix();
+            if self.render != nil {
+                glPushMatrix();
+                RMXGLTranslate(parent.anchor)
+                RMXGLTranslate(parent.body.position)
+                self.setMaterial()
+    //            RMXGLRender(self.render, Float(self.parent.body.radius))
+                self.render!(Float(self.parent.body.radius))
+                self.unsetMaterial()
+                glPopMatrix();
+            }
         }
-        
     
     }
         

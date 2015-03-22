@@ -126,27 +126,6 @@ void keyDownOperations (int key) {
         RMXGLProxy.itemBody.radius -= 0.5;
     }
     
-//        if (keys.keyStates['r'])
-//            art.r += 0.05;
-//        if (keys.keyStates['g'])
-//            art.g += 0.05;
-//        if (keys.keyStates['b'])
-//            art.b += 0.05;
-//        if (keys.keyStates['k'])
-//            art.k += 0.05;
-//            
-//    } else if (keys.keyStates['-']) {
-//        if (keys.keyStates['r'])
-//            art.r -= 0.05;
-//        if (keys.keyStates['g'])
-//            art.g -= 0.05;
-//        if (keys.keyStates['b'])
-//            art.b -= 0.05;
-//        if (keys.keyStates['k'])
-//            art.k -= 0.05;
-//    }
-    //if (keys.keySpecialStates[])
-    
 }
 
 //template <typename Particle>
@@ -205,7 +184,7 @@ void keyUpOperations(int key){
             if (RMX.isDebugging) NSLog(@"%i: TAB",key);
             break;
         case 'G':
-             [RMXGLProxy.activeSprite toggleGravity];
+            [RMXGLProxy message:@"toggleGravity" args:nil];
             break;
         case '0':
         case '1':

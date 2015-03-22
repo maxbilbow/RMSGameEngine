@@ -14,7 +14,7 @@ import Foundation
     var actions: RMXSpriteActions? { get }
     var camera: RMXCamera? { get }
     var body: RMSPhysicsBody { get }
-    func toggleGravity()
+    //func toggleGravity()
 }
 
 public class RMSParticle : RMXObject, RMXParticle {
@@ -47,11 +47,11 @@ public class RMSParticle : RMXObject, RMXParticle {
     var isRotating = false
     //static var COUNT: Int = 0
     
-    init(world:RMXWorld?,  parent:RMXObject! = nil)
+    init(world:RMXWorld?,  parent:RMXObject! = nil, name: String = "RMSParticle")
     {
         self.actions = RMXSpriteActions()
         self.behaviours = Array<() -> ()>()
-        super.init(parent:parent, world:world)
+        super.init(parent:parent, world:world, name: name)
         //RMSParticle.COUNT++
         self.actions!.parent = self
         self.mouse = RMXMouse(parent:self, world:self.world)
@@ -206,6 +206,9 @@ public class RMSParticle : RMXObject, RMXParticle {
         self.body.velocity = RMXVector3Zero()
     }
     
+    func plusAngle(point: NSPoint, speed: Float){
+        self.plusAngle(Float(point.x) * -speed, y: Float(point.y) * speed)
+    }
     public override func plusAngle(var x:Float, var y:Float) {
         super.plusAngle(x, y: y)
         //body.position.z += theta; return;
@@ -245,7 +248,7 @@ public class RMSParticle : RMXObject, RMXParticle {
     }
     
         
-    @objc public func toggleGravity() {
+    func toggleGravity() {
         self.hasGravity = !self.hasGravity
     }
     

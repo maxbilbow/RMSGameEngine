@@ -12,4 +12,6 @@
 
 #endif
 
+#define RMX_USE_DEPRECIATED (RMX.usingDepreciated)
+
 int RMXRun(int argc, char * argv[]);
