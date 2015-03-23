@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>RMX-ES.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>RMXPhysicsBeta.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -83,6 +88,16 @@
 			<true/>
 		</dict>
 		<key>6C7B506F1A9E7B2E00B140D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CF88B2E1ABFE6BE00450039</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CF88B4A1ABFE6BE00450039</key>
 		<dict>
 			<key>primary</key>
 			<true/>
