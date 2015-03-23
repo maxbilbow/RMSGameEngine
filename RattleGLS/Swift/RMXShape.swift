@@ -14,7 +14,7 @@ import Foundation
 
 public class RMXShape {
     
-    var node: SCNNode?
+    var node: Vertex?
     var color: GLKVector4 = GLKVector4Make(0,0,0,0)
     var isLight: Bool = false
     var type, gl_light: Int32
@@ -25,7 +25,7 @@ public class RMXShape {
     //var shine: CFunctionPointer<(Int32, Int32, [Float])->Void>
     var brigtness: Float = 1
     
-    init(parent: RMSParticle?, world: RMXWorld?)    {
+    init(parent: RMSParticle?, world: RMSWorld?)    {
         self.parent = parent!
         self.world = world
         self.type = GL_POSITION
@@ -51,11 +51,14 @@ public class RMXShape {
     func draw() {
         if !self.visible { return }
         if self.node != nil {
-            self.node!.position = SCNVector3FromGLKVector3(self.parent.body.position)
+            let v = self.parent.body.position
+            self.node!.Position.0 = v.x
+            self.node!.Position.1 = v.y
+            self.node!.Position.2 = v.z
 //            let q = self.parent.camera!.orientation
 //            self.node!.orientation = SCNVector4Make(CGFloat(q.x), CGFloat(q.y), CGFloat(q.z), CGFloat(q.w))
             let r: CGFloat = CGFloat(self.parent.body.radius)
-            self.node!.scale = SCNVector3(x: r,y: r,z: r)
+            //self.node!.scale = SCNVector3(x: r,y: r,z: r)
             
         } else if RMX.usingDepreciated {
             if self.isLight {

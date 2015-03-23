@@ -10,13 +10,12 @@ import Foundation
 
 @objc public class RMXCamera {
     
-    var scene: RMXGLView?
+    var world: RMXWorld?
     var pov: RMSParticle?
     var near, far, fieldOfView: Float
     var facingVector: GLKVector3 = RMXVector3Zero()
-    var scnCameraNode: SCNNode! = nil
     var effect: GLKBaseEffect! = nil
-    var gameView: GameView! = nil
+//    var gameView: GameView! = nil
     var aspectRatio: Float  {
         return Float(self.viewWidth) / Float(self.viewHeight)
     }
@@ -24,17 +23,22 @@ import Foundation
     var viewHeight: Float
 
     var projectionMatrix: GLKMatrix4 {
-        return GLKMatrix4MakePerspective(self.fieldOfView, self.aspectRatio, self.near, self.far)
+        return GLKMatrix4MakePerspective(GLKMathDegreesToRadians(self.fieldOfView), self.aspectRatio, self.near, self.far)
     }
     
+    func getProjectionMatrix(width: Float, height: Float) -> GLKMatrix4 {
+        self.viewWidth = width
+        self.viewHeight = height
+        return self.projectionMatrix
+    }
     var modelViewMatrix: GLKMatrix4 {
         return GLKMatrix4MakeLookAt(
             self.eye.x, self.eye.y, self.eye.z,
             self.center.x,  self.center.y, self.center.z,
             self.up.x,      self.up.y,     self.up.z)
     }
-    init(world: RMXGLView?, pov: RMSParticle! = nil,viewSize: (Float,Float) = (1280, 750), farPane far: Float = 2000 ){
-        self.scene = world ?? pov as! RMXWorld
+    init(world: RMSWorld?, pov: RMSParticle! = nil,viewSize: (Float,Float) = (1280, 750), farPane far: Float = 2000 ){
+        self.world = world ?? pov as! RMSWorld
         self.far = far
         self.near = 1
         self.fieldOfView = 65.0
@@ -63,39 +67,17 @@ import Foundation
         }
     }
     
-    private func makeLookAtGl(lookAt: CFunctionPointer<(Double, Double, Double, Double, Double, Double, Double, Double, Double) -> Void>) -> Void {
-     //   RMSMakeLookAtGL(self)
-        RMXMakeLookAtGL(lookAt,
-            Double(self.eye.x),     Double(self.eye.y),    Double(self.eye.z),
-            Double(self.center.x),  Double(self.center.y), Double(self.center.z),
-            Double(self.up.x),      Double(self.up.y),     Double(self.up.z)
-        )
+//    private func makeLookAtGl(lookAt: CFunctionPointer<(Double, Double, Double, Double, Double, Double, Double, Double, Double) -> Void>) -> Void {
+//     //   RMSMakeLookAtGL(self)
+//        RMXMakeLookAtGL(lookAt,
+//            Double(self.eye.x),     Double(self.eye.y),    Double(self.eye.z),
+//            Double(self.center.x),  Double(self.center.y), Double(self.center.z),
+//            Double(self.up.x),      Double(self.up.y),     Double(self.up.z)
+//        )
+//    
+//        
+//    }
     
-        
-    }
-    
-    /*
-    func updateSCNView(gameView: GameView! = nil){
-        if gameView != nil && self.gameView == nil {
-            self.gameView = gameView
-        }
-        if self.gameView == nil {
-            fatalError("Camera not initialised in \(self.pov?.name)")
-        }
-        //self.scnCameraNode!.position = SCNVector3FromGLKVector3(self.position)
-        //let cam = self.viewController.cameraNode
-        //cam.position = SCNVector3FromGLKVector3((self.pov?.body.position)!)
-        let view = self.gameView.pointOfView!
-        
-        //view!.setProjectionTransform(SCNMatrix4FromGLKMatrix4(self.modelViewMatrix))
-        view.position = SCNVector3FromGLKVector3((self.pov?.body.position)!)
-        //view.orientation = self.pov?.body.orientation
-        //RMXLog("gameView(view): \(view)")
-        
-        //self.viewController.cameraNode.position = SCNVector3FromGLKVector3((self.pov?.body.position)!)
-        //RMXLog("SCN Camera is received and set")
-        
-    } */
     
     func updateView(){
         if RMX.usingDepreciated {
@@ -129,12 +111,12 @@ import Foundation
         return (self.pov?.body.position)!
     }
     */
-    var position: SCNVector3 {
-        return SCNVector3FromGLKVector3((self.pov?.body.position)!)
+    var position: GLKVector3 {
+        return (self.pov?.body.position)!
     }
     
     var orientation: GLKQuaternion {
-        return GLKQuaternionMakeWithMatrix4( SCNMatrix4ToGLKMatrix4((self.pov?.body.orientation)!))
+        return GLKQuaternionMakeWithMatrix4((self.pov?.body.orientation)!)
     }
 
 }

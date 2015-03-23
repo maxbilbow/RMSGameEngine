@@ -37,13 +37,6 @@
 		503203D41AB0A719000DD1FE /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503203D31AB0A719000DD1FE /* SceneKit.framework */; };
 		503203DC1AB0A821000DD1FE /* RMXScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503203DB1AB0A821000DD1FE /* RMXScene.swift */; };
 		503203E41AB0A8A9000DD1FE /* cStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 503203E21AB0A8A9000DD1FE /* cStuff.m */; };
-		503DB4E21ABF565A0049F19E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 503DB4E11ABF565A0049F19E /* Default-568h@2x.png */; };
-		503DB4E41ABF68AE0049F19E /* RMXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DB4E31ABF68AE0049F19E /* RMXNode.swift */; };
-		505C7C7E1ABEEB05001CFAE6 /* RMSKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C7C7D1ABEEB05001CFAE6 /* RMSKeys.swift */; };
-		505C7C7F1ABEEC89001CFAE6 /* RMSKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C7C7D1ABEEB05001CFAE6 /* RMSKeys.swift */; };
-		505C7C811ABF17DB001CFAE6 /* RMSActionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C7C801ABF17DB001CFAE6 /* RMSActionProcessor.swift */; };
-		505C7C821ABF183D001CFAE6 /* RMSActionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C7C801ABF17DB001CFAE6 /* RMSActionProcessor.swift */; };
-		505C7C831ABF186D001CFAE6 /* RMSActionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505C7C801ABF17DB001CFAE6 /* RMSActionProcessor.swift */; };
 		505DC59D1AB0A8FE006CC4A9 /* RMXMouseProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B508C1A9E7B7400B140D7 /* RMXMouseProcessor.m */; };
 		505DC5A01AB0A907006CC4A9 /* RMXKeyboardProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7B50881A9E7B7400B140D7 /* RMXKeyboardProcessor.m */; };
 		505DC5A61AB0A920006CC4A9 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9AF1AAE455600B5F1B3 /* RMXEquations.m */; };
@@ -81,8 +74,6 @@
 		50A07A8B1ABDB2F500509334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501204371ABA44C200F4C075 /* ViewController.swift */; };
 		50A07A8D1ABDB38000509334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501204351ABA44C200F4C075 /* AppDelegate.swift */; };
 		50A07A8E1ABDBD7D00509334 /* RMSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008DAA01AB9FC8D00565A28 /* RMSView.swift */; };
-		50B3D8C61ABEE41A000FF77B /* RMXValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3D8C51ABEE41A000FF77B /* RMXValue.swift */; };
-		50B3D8C71ABEE41A000FF77B /* RMXValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B3D8C51ABEE41A000FF77B /* RMXValue.swift */; };
 		50CB5BA11ABB3F44001C61FF /* rattle1.icns in Resources */ = {isa = PBXBuildFile; fileRef = 50CB5BA01ABB3F44001C61FF /* rattle1.icns */; };
 		50D971931ABA51BB00CB7285 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505DD5A91AAF5B3D008FFB84 /* GLKit.framework */; };
 		50D971941ABA51C400CB7285 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503203D31AB0A719000DD1FE /* SceneKit.framework */; };
@@ -104,6 +95,47 @@
 		50F885681ABA337C0021B9C8 /* RMXSpriteActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885571ABA337C0021B9C8 /* RMXSpriteActions.swift */; };
 		50F8856B1ABA339F0021B9C8 /* run.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F8856A1ABA339F0021B9C8 /* run.m */; };
 		50F8856E1ABA33CB0021B9C8 /* RMXShapes.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F8856D1ABA33CB0021B9C8 /* RMXShapes.m */; };
+		6CCA4F881ABFF64B004D8209 /* RMXController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B691ABFE79500450039 /* RMXController.swift */; };
+		6CCA4F891ABFFD61004D8209 /* RMXMouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885521ABA337C0021B9C8 /* RMXMouse.swift */; };
+		6CCA4F8A1ABFFD83004D8209 /* cStuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 503203E21AB0A8A9000DD1FE /* cStuff.m */; };
+		6CCA4F8C1ABFFEC6004D8209 /* RMXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA4F8B1ABFFEC6004D8209 /* RMXViewController.m */; };
+		6CCA4F8E1ABFFF51004D8209 /* texture_numbers.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CCA4F8D1ABFFF51004D8209 /* texture_numbers.png */; };
+		6CF88B341ABFE6BE00450039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B331ABFE6BE00450039 /* main.m */; };
+		6CF88B371ABFE6BE00450039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B361ABFE6BE00450039 /* AppDelegate.m */; };
+		6CF88B391ABFE6BE00450039 /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 6CF88B381ABFE6BE00450039 /* Shader.fsh */; };
+		6CF88B3B1ABFE6BE00450039 /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 6CF88B3A1ABFE6BE00450039 /* Shader.vsh */; };
+		6CF88B411ABFE6BE00450039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF88B3F1ABFE6BE00450039 /* Main.storyboard */; };
+		6CF88B431ABFE6BE00450039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CF88B421ABFE6BE00450039 /* Images.xcassets */; };
+		6CF88B461ABFE6BE00450039 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF88B441ABFE6BE00450039 /* LaunchScreen.xib */; };
+		6CF88B521ABFE6BE00450039 /* RMX_ESTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B511ABFE6BE00450039 /* RMX_ESTests.m */; };
+		6CF88B591ABFE72B00450039 /* RMSArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885481ABA337C0021B9C8 /* RMSArt.swift */; };
+		6CF88B5A1ABFE72B00450039 /* RMSMaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885491ABA337C0021B9C8 /* RMSMaths.swift */; };
+		6CF88B5B1ABFE72B00450039 /* RMSParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854A1ABA337C0021B9C8 /* RMSParticle.swift */; };
+		6CF88B5C1ABFE72B00450039 /* RMSPhysicsBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854B1ABA337C0021B9C8 /* RMSPhysicsBody.swift */; };
+		6CF88B5D1ABFE72B00450039 /* RMSWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854C1ABA337C0021B9C8 /* RMSWorld.swift */; };
+		6CF88B5E1ABFE72B00450039 /* RMX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854D1ABA337C0021B9C8 /* RMX.swift */; };
+		6CF88B5F1ABFE72B00450039 /* RMXCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854E1ABA337C0021B9C8 /* RMXCamera.swift */; };
+		6CF88B601ABFE72B00450039 /* RMXDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F8854F1ABA337C0021B9C8 /* RMXDebugger.swift */; };
+		6CF88B641ABFE72B00450039 /* RMXObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885531ABA337C0021B9C8 /* RMXObject.swift */; };
+		6CF88B651ABFE72B00450039 /* RMXPhysics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885551ABA337C0021B9C8 /* RMXPhysics.swift */; };
+		6CF88B661ABFE72B00450039 /* RMXShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885561ABA337C0021B9C8 /* RMXShape.swift */; };
+		6CF88B671ABFE72B00450039 /* RMXSpriteActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F885571ABA337C0021B9C8 /* RMXSpriteActions.swift */; };
+		6CF88B701ABFE87D00450039 /* RMSActionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B6F1ABFE87D00450039 /* RMSActionProcessor.swift */; };
+		6CF88B711ABFE87D00450039 /* RMSActionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B6F1ABFE87D00450039 /* RMSActionProcessor.swift */; };
+		6CF88B731ABFE8AB00450039 /* RMSKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B721ABFE8AB00450039 /* RMSKeys.swift */; };
+		6CF88B741ABFE8AB00450039 /* RMSKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B721ABFE8AB00450039 /* RMSKeys.swift */; };
+		6CF88B761ABFE8B900450039 /* RMXDPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B751ABFE8B900450039 /* RMXDPad.swift */; };
+		6CF88B771ABFE8B900450039 /* RMXDPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B751ABFE8B900450039 /* RMXDPad.swift */; };
+		6CF88B7F1ABFE92D00450039 /* RMXEquations.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9AF1AAE455600B5F1B3 /* RMXEquations.m */; };
+		6CF88B801ABFE92D00450039 /* RMXMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E6B9B11AAE455600B5F1B3 /* RMXMaths.m */; };
+		6CF88B831ABFEB7100450039 /* RMXInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B821ABFEB7100450039 /* RMXInitialize.swift */; };
+		6CF88B841ABFEB7100450039 /* RMXInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B821ABFEB7100450039 /* RMXInitialize.swift */; };
+		6CF88B871ABFEC4B00450039 /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B861ABFEC4B00450039 /* Geometry.m */; };
+		6CF88B881ABFEC4B00450039 /* Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B861ABFEC4B00450039 /* Geometry.m */; };
+		6CF88B8A1ABFED7400450039 /* RMXValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B891ABFED7400450039 /* RMXValue.swift */; };
+		6CF88B8B1ABFED7400450039 /* RMXValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B891ABFED7400450039 /* RMXValue.swift */; };
+		6CF88B8D1ABFF02300450039 /* RMXWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B8C1ABFF02300450039 /* RMXWorld.swift */; };
+		6CF88B8E1ABFF02300450039 /* RMXWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF88B8C1ABFF02300450039 /* RMXWorld.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +166,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 509B6C201ABDE9F900D4AF94;
 			remoteInfo = "RMS SceneKit";
+		};
+		6CF88B4C1ABFE6BE00450039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C7B50681A9E7B2E00B140D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CF88B2E1ABFE6BE00450039;
+			remoteInfo = "RMX-ES";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -180,10 +219,6 @@
 		503203DB1AB0A821000DD1FE /* RMXScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RMXScene.swift; path = ../RattleGLS/RMXScene.swift; sourceTree = "<group>"; };
 		503203E21AB0A8A9000DD1FE /* cStuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cStuff.m; path = ../RattleGLS/cStuff.m; sourceTree = "<group>"; };
 		503203E31AB0A8A9000DD1FE /* cStuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cStuff.h; path = ../RattleGLS/cStuff.h; sourceTree = "<group>"; };
-		503DB4E11ABF565A0049F19E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		503DB4E31ABF68AE0049F19E /* RMXNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXNode.swift; sourceTree = "<group>"; };
-		505C7C7D1ABEEB05001CFAE6 /* RMSKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSKeys.swift; sourceTree = "<group>"; };
-		505C7C801ABF17DB001CFAE6 /* RMSActionProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMSActionProcessor.swift; path = Swift/RMSActionProcessor.swift; sourceTree = SOURCE_ROOT; };
 		505DD5A91AAF5B3D008FFB84 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		509B6C211ABDE9F900D4AF94 /* RMS SceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RMS SceneKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		509B6C241ABDE9F900D4AF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,8 +231,6 @@
 		509B6C361ABDE9F900D4AF94 /* RMS SceneKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RMS SceneKitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		509B6C3B1ABDE9F900D4AF94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		509B6C3C1ABDE9F900D4AF94 /* RMS_SceneKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMS_SceneKitTests.swift; sourceTree = "<group>"; };
-		509B6C591ABDEEA600D4AF94 /* RMXDPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXDPad.swift; sourceTree = "<group>"; };
-		50B3D8C51ABEE41A000FF77B /* RMXValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXValue.swift; sourceTree = "<group>"; };
 		50CB5BA01ABB3F44001C61FF /* rattle1.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rattle1.icns; sourceTree = "<group>"; };
 		50DA69011AAE1D6F00C81158 /* RMXKeyboardProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMXKeyboardProcessor.h; path = "../Objective-C/RMXKeyboardProcessor.h"; sourceTree = "<group>"; };
 		50E6B9AE1AAE455600B5F1B3 /* RMXEquations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMXEquations.h; path = "Objective-C/RMXEquations.h"; sourceTree = SOURCE_ROOT; };
@@ -226,6 +259,33 @@
 		6C7B50701A9E7B2E00B140D7 /* RattleGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RattleGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7B50881A9E7B7400B140D7 /* RMXKeyboardProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMXKeyboardProcessor.m; path = "../Objective-C/RMXKeyboardProcessor.m"; sourceTree = "<group>"; };
 		6C7B508C1A9E7B7400B140D7 /* RMXMouseProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMXMouseProcessor.m; path = "../Objective-C/RMXMouseProcessor.m"; sourceTree = "<group>"; };
+		6CCA4F8B1ABFFEC6004D8209 /* RMXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMXViewController.m; sourceTree = "<group>"; };
+		6CCA4F8D1ABFFF51004D8209 /* texture_numbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texture_numbers.png; sourceTree = "<group>"; };
+		6CF88B2F1ABFE6BE00450039 /* RMX-ES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RMX-ES.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF88B321ABFE6BE00450039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CF88B331ABFE6BE00450039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6CF88B351ABFE6BE00450039 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6CF88B361ABFE6BE00450039 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6CF88B381ABFE6BE00450039 /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		6CF88B3A1ABFE6BE00450039 /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		6CF88B3C1ABFE6BE00450039 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		6CF88B3D1ABFE6BE00450039 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		6CF88B401ABFE6BE00450039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CF88B421ABFE6BE00450039 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6CF88B451ABFE6BE00450039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6CF88B4B1ABFE6BE00450039 /* RMX-ESTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RMX-ESTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF88B501ABFE6BE00450039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CF88B511ABFE6BE00450039 /* RMX_ESTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMX_ESTests.m; sourceTree = "<group>"; };
+		6CF88B691ABFE79500450039 /* RMXController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXController.swift; path = Swift/RMXController.swift; sourceTree = SOURCE_ROOT; };
+		6CF88B6F1ABFE87D00450039 /* RMSActionProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMSActionProcessor.swift; path = Swift/RMSActionProcessor.swift; sourceTree = SOURCE_ROOT; };
+		6CF88B721ABFE8AB00450039 /* RMSKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMSKeys.swift; path = Swift/RMSKeys.swift; sourceTree = SOURCE_ROOT; };
+		6CF88B751ABFE8B900450039 /* RMXDPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXDPad.swift; path = Swift/RMXDPad.swift; sourceTree = SOURCE_ROOT; };
+		6CF88B781ABFE8C400450039 /* RMXDesktopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMXDesktopController.swift; path = Swift/RMXDesktopController.swift; sourceTree = SOURCE_ROOT; };
+		6CF88B821ABFEB7100450039 /* RMXInitialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXInitialize.swift; sourceTree = "<group>"; };
+		6CF88B851ABFEC4B00450039 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
+		6CF88B861ABFEC4B00450039 /* Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Geometry.m; sourceTree = "<group>"; };
+		6CF88B891ABFED7400450039 /* RMXValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXValue.swift; sourceTree = "<group>"; };
+		6CF88B8C1ABFF02300450039 /* RMXWorld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMXWorld.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +364,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CF88B2C1ABFE6BE00450039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CF88B481ABFE6BE00450039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -311,7 +385,6 @@
 			isa = PBXGroup;
 			children = (
 				500B6D8F1ABC8D7D001B5811 /* Images.xcassets */,
-				5012046C1ABA49AD00F4C075 /* RattleGLS-Bridging-Header.h */,
 				5008DAA01AB9FC8D00565A28 /* RMSView.swift */,
 				501204351ABA44C200F4C075 /* AppDelegate.swift */,
 				501204371ABA44C200F4C075 /* ViewController.swift */,
@@ -360,7 +433,6 @@
 				509B6C251ABDE9F900D4AF94 /* AppDelegate.swift */,
 				509B6C271ABDE9F900D4AF94 /* GameView.swift */,
 				509B6C291ABDE9F900D4AF94 /* GameViewController.swift */,
-				503DB4E31ABF68AE0049F19E /* RMXNode.swift */,
 				509B6C2B1ABDE9F900D4AF94 /* art.scnassets */,
 				509B6C2D1ABDE9F900D4AF94 /* Images.xcassets */,
 				509B6C2F1ABDE9F900D4AF94 /* MainMenu.xib */,
@@ -397,7 +469,6 @@
 		6C7B50671A9E7B2E00B140D7 = {
 			isa = PBXGroup;
 			children = (
-				503DB4E11ABF565A0049F19E /* Default-568h@2x.png */,
 				503203D31AB0A719000DD1FE /* SceneKit.framework */,
 				505DD5A91AAF5B3D008FFB84 /* GLKit.framework */,
 				6C7B507F1A9E7B7400B140D7 /* Swift */,
@@ -407,6 +478,8 @@
 				501204451ABA44C200F4C075 /* Rattle Physics BetaTests */,
 				509B6C221ABDE9F900D4AF94 /* RMS SceneKit */,
 				509B6C391ABDE9F900D4AF94 /* RMS SceneKitTests */,
+				6CF88B301ABFE6BE00450039 /* RMX-ES */,
+				6CF88B4E1ABFE6BE00450039 /* RMX-ESTests */,
 				6C7B50711A9E7B2E00B140D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -424,6 +497,8 @@
 				501204421ABA44C200F4C075 /* Rattle Physics BetaTests.xctest */,
 				509B6C211ABDE9F900D4AF94 /* RMS SceneKit.app */,
 				509B6C361ABDE9F900D4AF94 /* RMS SceneKitTests.xctest */,
+				6CF88B2F1ABFE6BE00450039 /* RMX-ES.app */,
+				6CF88B4B1ABFE6BE00450039 /* RMX-ESTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,6 +506,9 @@
 		6C7B507A1A9E7B7400B140D7 /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				6CF88B851ABFEC4B00450039 /* Geometry.h */,
+				6CF88B861ABFEC4B00450039 /* Geometry.m */,
+				5012046C1ABA49AD00F4C075 /* RattleGLS-Bridging-Header.h */,
 				50F8856C1ABA33CB0021B9C8 /* RMXShapes.h */,
 				50F8856D1ABA33CB0021B9C8 /* RMXShapes.m */,
 				50F885691ABA339F0021B9C8 /* run.h */,
@@ -454,29 +532,78 @@
 			isa = PBXGroup;
 			children = (
 				50F885471ABA337C0021B9C8 /* Info.plist */,
+				6CF88B6F1ABFE87D00450039 /* RMSActionProcessor.swift */,
 				50F885481ABA337C0021B9C8 /* RMSArt.swift */,
 				50F885491ABA337C0021B9C8 /* RMSMaths.swift */,
 				50F8854A1ABA337C0021B9C8 /* RMSParticle.swift */,
 				50F8854B1ABA337C0021B9C8 /* RMSPhysicsBody.swift */,
+				6CF88B8C1ABFF02300450039 /* RMXWorld.swift */,
 				50F8854C1ABA337C0021B9C8 /* RMSWorld.swift */,
-				505C7C801ABF17DB001CFAE6 /* RMSActionProcessor.swift */,
 				50F8854D1ABA337C0021B9C8 /* RMX.swift */,
 				50F8854E1ABA337C0021B9C8 /* RMXCamera.swift */,
 				50F8854F1ABA337C0021B9C8 /* RMXDebugger.swift */,
 				50F885501ABA337C0021B9C8 /* RMXGLut.swift */,
 				50F885521ABA337C0021B9C8 /* RMXMouse.swift */,
-				509B6C591ABDEEA600D4AF94 /* RMXDPad.swift */,
+				6CF88B781ABFE8C400450039 /* RMXDesktopController.swift */,
+				6CF88B721ABFE8AB00450039 /* RMSKeys.swift */,
+				6CF88B691ABFE79500450039 /* RMXController.swift */,
+				6CF88B891ABFED7400450039 /* RMXValue.swift */,
+				6CF88B751ABFE8B900450039 /* RMXDPad.swift */,
 				50F885531ABA337C0021B9C8 /* RMXObject.swift */,
 				50F885551ABA337C0021B9C8 /* RMXPhysics.swift */,
 				50F885561ABA337C0021B9C8 /* RMXShape.swift */,
-				50B3D8C51ABEE41A000FF77B /* RMXValue.swift */,
 				50F885571ABA337C0021B9C8 /* RMXSpriteActions.swift */,
 				503203DB1AB0A821000DD1FE /* RMXScene.swift */,
-				505C7C7D1ABEEB05001CFAE6 /* RMSKeys.swift */,
+				6CF88B821ABFEB7100450039 /* RMXInitialize.swift */,
 			);
 			name = Swift;
 			path = "Objective-C";
 			sourceTree = SOURCE_ROOT;
+		};
+		6CF88B301ABFE6BE00450039 /* RMX-ES */ = {
+			isa = PBXGroup;
+			children = (
+				6CCA4F8D1ABFFF51004D8209 /* texture_numbers.png */,
+				6CF88B351ABFE6BE00450039 /* AppDelegate.h */,
+				6CF88B361ABFE6BE00450039 /* AppDelegate.m */,
+				6CF88B381ABFE6BE00450039 /* Shader.fsh */,
+				6CF88B3A1ABFE6BE00450039 /* Shader.vsh */,
+				6CF88B3C1ABFE6BE00450039 /* GameViewController.h */,
+				6CF88B3D1ABFE6BE00450039 /* GameViewController.m */,
+				6CCA4F8B1ABFFEC6004D8209 /* RMXViewController.m */,
+				6CF88B3F1ABFE6BE00450039 /* Main.storyboard */,
+				6CF88B421ABFE6BE00450039 /* Images.xcassets */,
+				6CF88B441ABFE6BE00450039 /* LaunchScreen.xib */,
+				6CF88B311ABFE6BE00450039 /* Supporting Files */,
+			);
+			path = "RMX-ES";
+			sourceTree = "<group>";
+		};
+		6CF88B311ABFE6BE00450039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CF88B321ABFE6BE00450039 /* Info.plist */,
+				6CF88B331ABFE6BE00450039 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6CF88B4E1ABFE6BE00450039 /* RMX-ESTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CF88B511ABFE6BE00450039 /* RMX_ESTests.m */,
+				6CF88B4F1ABFE6BE00450039 /* Supporting Files */,
+			);
+			path = "RMX-ESTests";
+			sourceTree = "<group>";
+		};
+		6CF88B4F1ABFE6BE00450039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CF88B501ABFE6BE00450039 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -655,6 +782,41 @@
 			productReference = 6C7B50701A9E7B2E00B140D7 /* RattleGL */;
 			productType = "com.apple.product-type.tool";
 		};
+		6CF88B2E1ABFE6BE00450039 /* RMX-ES */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CF88B571ABFE6BE00450039 /* Build configuration list for PBXNativeTarget "RMX-ES" */;
+			buildPhases = (
+				6CF88B2B1ABFE6BE00450039 /* Sources */,
+				6CF88B2C1ABFE6BE00450039 /* Frameworks */,
+				6CF88B2D1ABFE6BE00450039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RMX-ES";
+			productName = "RMX-ES";
+			productReference = 6CF88B2F1ABFE6BE00450039 /* RMX-ES.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CF88B4A1ABFE6BE00450039 /* RMX-ESTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CF88B581ABFE6BE00450039 /* Build configuration list for PBXNativeTarget "RMX-ESTests" */;
+			buildPhases = (
+				6CF88B471ABFE6BE00450039 /* Sources */,
+				6CF88B481ABFE6BE00450039 /* Frameworks */,
+				6CF88B491ABFE6BE00450039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CF88B4D1ABFE6BE00450039 /* PBXTargetDependency */,
+			);
+			name = "RMX-ESTests";
+			productName = "RMX-ESTests";
+			productReference = 6CF88B4B1ABFE6BE00450039 /* RMX-ESTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -699,6 +861,13 @@
 					6C7B506F1A9E7B2E00B140D7 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
+					6CF88B2E1ABFE6BE00450039 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					6CF88B4A1ABFE6BE00450039 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 6CF88B2E1ABFE6BE00450039;
+					};
 				};
 			};
 			buildConfigurationList = 6C7B506B1A9E7B2E00B140D7 /* Build configuration list for PBXProject "RattleGL" */;
@@ -724,6 +893,8 @@
 				501204411ABA44C200F4C075 /* Rattle Physics BetaTests */,
 				509B6C201ABDE9F900D4AF94 /* RMS SceneKit */,
 				509B6C351ABDE9F900D4AF94 /* RMS SceneKitTests */,
+				6CF88B2E1ABFE6BE00450039 /* RMX-ES */,
+				6CF88B4A1ABFE6BE00450039 /* RMX-ESTests */,
 			);
 		};
 /* End PBXProject section */
@@ -733,7 +904,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				503DB4E21ABF565A0049F19E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +962,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6CF88B2D1ABFE6BE00450039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CCA4F8E1ABFFF51004D8209 /* texture_numbers.png in Resources */,
+				6CF88B461ABFE6BE00450039 /* LaunchScreen.xib in Resources */,
+				6CF88B411ABFE6BE00450039 /* Main.storyboard in Resources */,
+				6CF88B431ABFE6BE00450039 /* Images.xcassets in Resources */,
+				6CF88B3B1ABFE6BE00450039 /* Shader.vsh in Resources */,
+				6CF88B391ABFE6BE00450039 /* Shader.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CF88B491ABFE6BE00450039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -842,7 +1032,6 @@
 				501204511ABA450800F4C075 /* run.m in Sources */,
 				501204501ABA450800F4C075 /* RMXShapes.m in Sources */,
 				501204521ABA450800F4C075 /* RMXKeyboardProcessor.m in Sources */,
-				505C7C831ABF186D001CFAE6 /* RMSActionProcessor.swift in Sources */,
 				5012045D1ABA451400F4C075 /* RMXCamera.swift in Sources */,
 				5012045A1ABA451400F4C075 /* RMSPhysicsBody.swift in Sources */,
 				501204561ABA450800F4C075 /* cStuff.m in Sources */,
@@ -902,19 +1091,15 @@
 				509B6C471ABDEA3300D4AF94 /* RMSPhysicsBody.swift in Sources */,
 				509B6C4A1ABDEA3300D4AF94 /* RMXCamera.swift in Sources */,
 				509B6C4D1ABDEA3300D4AF94 /* RMXMouse.swift in Sources */,
-				505C7C7F1ABEEC89001CFAE6 /* RMSKeys.swift in Sources */,
 				509B6C581ABDED6D00D4AF94 /* RMXMouseProcessor.m in Sources */,
 				509B6C571ABDED6D00D4AF94 /* RMXKeyboardProcessor.m in Sources */,
-				503DB4E41ABF68AE0049F19E /* RMXNode.swift in Sources */,
 				509B6C441ABDEA3300D4AF94 /* RMSArt.swift in Sources */,
 				509B6C481ABDEA3300D4AF94 /* RMSWorld.swift in Sources */,
 				509B6C531ABDEB2500D4AF94 /* RMXEquations.m in Sources */,
 				509B6C4F1ABDEA3300D4AF94 /* RMXPhysics.swift in Sources */,
 				509B6C551ABDEB2500D4AF94 /* cStuff.m in Sources */,
 				509B6C561ABDED5D00D4AF94 /* run.m in Sources */,
-				505C7C821ABF183D001CFAE6 /* RMSActionProcessor.swift in Sources */,
 				509B6C281ABDE9F900D4AF94 /* GameView.swift in Sources */,
-				50B3D8C71ABEE41A000FF77B /* RMXValue.swift in Sources */,
 				509B6C2A1ABDE9F900D4AF94 /* GameViewController.swift in Sources */,
 				509B6C511ABDEA3300D4AF94 /* RMXSpriteActions.swift in Sources */,
 				509B6C5C1ABDF43200D4AF94 /* RMXScene.swift in Sources */,
@@ -940,13 +1125,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				505C7C7E1ABEEB05001CFAE6 /* RMSKeys.swift in Sources */,
+				6CF88B871ABFEC4B00450039 /* Geometry.m in Sources */,
+				6CF88B831ABFEB7100450039 /* RMXInitialize.swift in Sources */,
+				6CF88B8D1ABFF02300450039 /* RMXWorld.swift in Sources */,
+				6CF88B761ABFE8B900450039 /* RMXDPad.swift in Sources */,
 				50183D411AAE2E8900FF2A26 /* RMXMouseProcessor.m in Sources */,
+				6CF88B731ABFE8AB00450039 /* RMSKeys.swift in Sources */,
 				50E6B9B31AAE455600B5F1B3 /* RMXMaths.m in Sources */,
-				50B3D8C61ABEE41A000FF77B /* RMXValue.swift in Sources */,
-				505C7C811ABF17DB001CFAE6 /* RMSActionProcessor.swift in Sources */,
+				6CF88B701ABFE87D00450039 /* RMSActionProcessor.swift in Sources */,
+				6CF88B8A1ABFED7400450039 /* RMXValue.swift in Sources */,
 				50E6B9B21AAE455600B5F1B3 /* RMXEquations.m in Sources */,
 				508AB5D71AB7B4D200B95AF8 /* RMXKeyboardProcessor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CF88B2B1ABFE6BE00450039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CF88B5A1ABFE72B00450039 /* RMSMaths.swift in Sources */,
+				6CF88B7F1ABFE92D00450039 /* RMXEquations.m in Sources */,
+				6CF88B5C1ABFE72B00450039 /* RMSPhysicsBody.swift in Sources */,
+				6CCA4F891ABFFD61004D8209 /* RMXMouse.swift in Sources */,
+				6CF88B5F1ABFE72B00450039 /* RMXCamera.swift in Sources */,
+				6CF88B8E1ABFF02300450039 /* RMXWorld.swift in Sources */,
+				6CF88B651ABFE72B00450039 /* RMXPhysics.swift in Sources */,
+				6CF88B591ABFE72B00450039 /* RMSArt.swift in Sources */,
+				6CF88B801ABFE92D00450039 /* RMXMaths.m in Sources */,
+				6CF88B5D1ABFE72B00450039 /* RMSWorld.swift in Sources */,
+				6CF88B741ABFE8AB00450039 /* RMSKeys.swift in Sources */,
+				6CF88B881ABFEC4B00450039 /* Geometry.m in Sources */,
+				6CF88B371ABFE6BE00450039 /* AppDelegate.m in Sources */,
+				6CF88B641ABFE72B00450039 /* RMXObject.swift in Sources */,
+				6CCA4F8C1ABFFEC6004D8209 /* RMXViewController.m in Sources */,
+				6CCA4F881ABFF64B004D8209 /* RMXController.swift in Sources */,
+				6CF88B661ABFE72B00450039 /* RMXShape.swift in Sources */,
+				6CF88B8B1ABFED7400450039 /* RMXValue.swift in Sources */,
+				6CF88B5B1ABFE72B00450039 /* RMSParticle.swift in Sources */,
+				6CF88B711ABFE87D00450039 /* RMSActionProcessor.swift in Sources */,
+				6CF88B601ABFE72B00450039 /* RMXDebugger.swift in Sources */,
+				6CF88B841ABFEB7100450039 /* RMXInitialize.swift in Sources */,
+				6CF88B771ABFE8B900450039 /* RMXDPad.swift in Sources */,
+				6CF88B341ABFE6BE00450039 /* main.m in Sources */,
+				6CF88B671ABFE72B00450039 /* RMXSpriteActions.swift in Sources */,
+				6CCA4F8A1ABFFD83004D8209 /* cStuff.m in Sources */,
+				6CF88B5E1ABFE72B00450039 /* RMX.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CF88B471ABFE6BE00450039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CF88B521ABFE6BE00450039 /* RMX_ESTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,6 +1204,11 @@
 			target = 509B6C201ABDE9F900D4AF94 /* RMS SceneKit */;
 			targetProxy = 509B6C371ABDE9F900D4AF94 /* PBXContainerItemProxy */;
 		};
+		6CF88B4D1ABFE6BE00450039 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CF88B2E1ABFE6BE00450039 /* RMX-ES */;
+			targetProxy = 6CF88B4C1ABFE6BE00450039 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -990,6 +1226,22 @@
 				509B6C301ABDE9F900D4AF94 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		6CF88B3F1ABFE6BE00450039 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CF88B401ABFE6BE00450039 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CF88B441ABFE6BE00450039 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CF88B451ABFE6BE00450039 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1436,6 +1688,88 @@
 			};
 			name = Release;
 		};
+		6CF88B531ABFE6BE00450039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMX-ES/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RattleGLS-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CF88B541ABFE6BE00450039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "RMX-ES/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RattleGLS-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CF88B551ABFE6BE00450039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RMX-ESTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMX-ES.app/RMX-ES";
+			};
+			name = Debug;
+		};
+		6CF88B561ABFE6BE00450039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "RMX-ESTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RMX-ES.app/RMX-ES";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1534,6 +1868,24 @@
 			buildConfigurations = (
 				6C7B50781A9E7B2E00B140D7 /* Debug */,
 				6C7B50791A9E7B2E00B140D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CF88B571ABFE6BE00450039 /* Build configuration list for PBXNativeTarget "RMX-ES" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CF88B531ABFE6BE00450039 /* Debug */,
+				6CF88B541ABFE6BE00450039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CF88B581ABFE6BE00450039 /* Build configuration list for PBXNativeTarget "RMX-ESTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CF88B551ABFE6BE00450039 /* Debug */,
+				6CF88B561ABFE6BE00450039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

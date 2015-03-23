@@ -13,12 +13,12 @@ public class RMXObject {
     var isAnimated: Bool = true
     private var _name: String
     var parent: RMXObject?
-    var world: RMXWorld?
+    var world: RMSWorld?
     var resets: [() -> () ]
     var name: String {
         return "\(_name): \(self.rmxID)"
     }
-    init(parent: RMXObject? = nil, world: RMXWorld? = nil, name: String = "RMXObject"){
+    init(parent: RMXObject? = nil, world: RMSWorld? = nil, name: String = "RMXObject"){
         self.parent = parent
         self.world = world
         self.rmxID = RMXObject.COUNT

@@ -144,12 +144,10 @@ RMXVector3 RMXMatrix3MultiplyScalarAndSpeed(RMXMatrix3 m, float s){
 }
 
 RMXVector3 RMXMatrix4MultiplyVector3(RMXMatrix4 m, RMXVector3 s){
-    return GLKMatrix4MultiplyVector3(SCNMatrix4ToGLKMatrix4(m),s);
+    return GLKMatrix4MultiplyVector3(m,s);
 }
 
-RMXMatrix4 RMXMatrix4Transpose(RMXMatrix4 m){
-    return SCNMatrix4FromGLKMatrix4(GLKMatrix4Transpose(SCNMatrix4ToGLKMatrix4(m)));
-}
+
 
 RMXVector3 RMXScaler3FromVector3(RMXVector3 x, RMXVector3 y, RMXVector3 z){
     return GLKVector3Make(RMXGetSpeed(x),RMXGetSpeed(y),RMXGetSpeed(z));
@@ -168,18 +166,11 @@ RMXMatrix3 RMXMatrix3RotateAboutY(float theta, RMXMatrix3  matrix){
 
 }
 
-
-
-RMXVector3 RMXMatrix3MultiplyVector3(RMXMatrix4 ml, RMXVector3 vectorRight)
-{
-    GLKMatrix4 matrixLeft = SCNMatrix4ToGLKMatrix4(ml);
-   // GLKVector3 vectorRight = SCNVector3ToGLKVector3(vr);
-    RMXVector3 v = {
-        matrixLeft.m[0] * vectorRight.v[0] + matrixLeft.m[1] * vectorRight.v[0] + matrixLeft.m[0] * vectorRight.v[0],
-        matrixLeft.m[3] * vectorRight.v[1] + matrixLeft.m[4] * vectorRight.v[1] + matrixLeft.m[1] * vectorRight.v[2],
-        matrixLeft.m[6] * vectorRight.v[2] + matrixLeft.m[7] * vectorRight.v[2] + matrixLeft.m[2] * vectorRight.v[2] };
-    return v;
+RMXVector3 RMXMatrix3MultiplyVector3(RMXMatrix3 matrixLeft, RMXVector3 vectorRight){
+    return GLKMatrix3MultiplyVector3(matrixLeft, vectorRight);
 }
+
+
 
 void RMXPrintMatrix(GLKMatrix4 m){
     
@@ -195,4 +186,19 @@ void RMXVector3SetY(RMXVector3 * v, float y){
 
 void RMXVector3SetZ(RMXVector3 * v, float z){
     v->z = z;
+}
+
+SCNMatrix4 SCNMatrix4Transpose(SCNMatrix4 m){
+    return SCNMatrix4FromGLKMatrix4(GLKMatrix4Transpose(SCNMatrix4ToGLKMatrix4(m)));
+}
+
+SCNVector3 SCNMatrix3MultiplyVector3(SCNMatrix4 ml, RMXVector3 vectorRight)
+{
+    GLKMatrix4 matrixLeft = SCNMatrix4ToGLKMatrix4(ml);
+    // GLKVector3 vectorRight = SCNVector3ToGLKVector3(vr);
+    SCNVector3 v = SCNVector3Make(
+        matrixLeft.m[0] * vectorRight.v[0] + matrixLeft.m[1] * vectorRight.v[0] + matrixLeft.m[0] * vectorRight.v[0],
+        matrixLeft.m[3] * vectorRight.v[1] + matrixLeft.m[4] * vectorRight.v[1] + matrixLeft.m[1] * vectorRight.v[2],
+        matrixLeft.m[6] * vectorRight.v[2] + matrixLeft.m[7] * vectorRight.v[2] + matrixLeft.m[2] * vectorRight.v[2] );
+    return v;
 }

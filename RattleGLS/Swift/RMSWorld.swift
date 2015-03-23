@@ -9,23 +9,24 @@
 import Foundation
 
 
- public class RMXWorld : RMSParticle, RMXGLView {
-//    let _g: Float = 0.01/50
-//    let _f: Float = 1.1
-    lazy var action: RMSActionProcessor = RMSActionProcessor(world: self)
+public class RMSWorld : RMSParticle, RMXWorld {
+
+    private lazy var _action: RMSActionProcessor = RMSActionProcessor(world: self)
     private let GRAVITY: Float = 9.8
     var sprites: [RMSParticle]
     lazy var observer: RMSParticle = RMSParticle(world: self, parent: self).setAsObserver()
     override var physics: RMXPhysics? {
-        return self.worldPhysics
+        return self._worldPhysics
     }
-    lazy var worldPhysics: RMXPhysics? = RMXPhysics(parent: self)
-    public var activeSprite: RMSParticle? {
+    private lazy var _worldPhysics: RMXPhysics? = RMXPhysics(parent: self)
+    
+    var activeSprite: RMSParticle? {
         return self.observer
     }
-    public var activeCamera: RMXCamera? {
+    @objc public var activeCamera: RMXCamera? {
         return observer.camera
     }
+    
    
     
     init(parent: RMXObject! = nil, name: String = "The World", capacity: Int = 15000) {
@@ -33,7 +34,7 @@ import Foundation
         self.sprites.reserveCapacity(capacity)
         
         super.init(world: nil, parent: parent, name: name)
-        self.body.radius = 50
+        self.body.radius = 1000
 
         
         self.camera = RMXCamera(world: self, pov: observer)
@@ -113,9 +114,9 @@ import Foundation
         
     }
     
-    func resetWorld() {
-        self.observer.reset()//->body.position = GLKVector3Make(0,0,0);
-            //self.observer->body.velocity = GLKVector3Make(0,0,0);
+    override func reset() {
+        self.observer.reset()
+        //super.reset()
     }
     
     func closestObjectTo(sender: RMSParticle)->RMSParticle? {
@@ -139,7 +140,7 @@ import Foundation
     
   
     //private var _hasGravity = false
-    override func toggleGravity() {
+    override public func toggleGravity() {
         for sprite in sprites {
             if !(sprite.isLightSource) {
                 sprite.hasGravity = self.hasGravity
@@ -147,26 +148,36 @@ import Foundation
         }
         super.toggleGravity()
     }
-    
-    public func message(function: String, args: AnyObject?...) {
+   /*
+    @objc public func message(function: String, args: [AnyObject]?) {
         switch function {
         case "toggleGravity":
             self.toggleGravity()
             break
         case "resetWorld":
-            self.resetWorld()
+            self.reset()
             break
         default:
             println("\(function): Not Recognised")
         }
         print(function)
-        for arg in args {
-            print(" \(arg)")
+        if args != nil {
+            for arg in args! {
+                print(" \(arg)")
+            }
         }
         println()
         
+    }*/
+//    @objc public func doAction(speed: Float, action: String){
+//        self.action(speed: speed, action: action)
+//    }
+//    @objc public func doAction(speed: Float, action: String , point: [Float]){
+//        self.action(speed: speed, action: action, point: point)
+//    }
+    
+    func action(action: String = "reset",speed: Float = 0, point: [Float] = []) {
+        self._action.movement( action,speed: speed, point: point)
     }
-    
-    
     
 }

@@ -13,14 +13,14 @@
 #endif
 
 
-#import <SceneKit/SceneKit.h>
+//#import <SceneKit/SceneKit.h>
 #define PI                      3.14159265358979323846
 #define PI_OVER_180             (PI / 180)
 #define RMX_INFINITY            9999
 
 typedef GLKVector3 RMXVector3;
 typedef GLKMatrix3 RMXMatrix3;
-typedef SCNMatrix4 RMXMatrix4;
+typedef GLKMatrix4 RMXMatrix4;
 
 /*
 typedef struct _RMXPhysicsBody
@@ -71,13 +71,15 @@ RMXVector3 RMXMatrix4MultiplyVector3(RMXMatrix4 m, RMXVector3 s);
 RMXVector3 RMXScaler3FromVector3(RMXVector3 x, RMXVector3 y, RMXVector3 z);
 RMXVector3 RMXScaler3FromMatrix3(RMXMatrix3 m);
 RMXMatrix3 RMXMatrix3RotateAboutY(float theta, RMXMatrix3  matrix);
-RMXVector3 RMXMatrix3MultiplyVector3(RMXMatrix4 matrixLeft, RMXVector3 vectorRight);
-RMXMatrix4 RMXMatrix4Transpose(RMXMatrix4 m);
+RMXVector3 RMXMatrix3MultiplyVector3(RMXMatrix3 matrixLeft, RMXVector3 vectorRight);
+//SCNMatrix4 RMXMatrix4Transpose(SCNMatrix4 m);
+//SCNMatrix4 RMXMatrix3MultiplyVector3(SCNMatrix4 ml, RMXVector3 vectorRight);
 void RMXVector3SetX(RMXVector3 * v, float x);
 void RMXVector3SetY(RMXVector3 * v, float y);
 void RMXVector3SetZ(RMXVector3 * v, float z);
 
 
 void RMXPrintMatrix(GLKMatrix4 m);
+
 //@class RMXParticle;
 

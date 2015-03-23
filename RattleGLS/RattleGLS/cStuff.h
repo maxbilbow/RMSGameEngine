@@ -17,7 +17,7 @@ void RMXMakeLookAtGL(void (* lookAt)(double eyeX, double eyeY, double eyez,
                                      double upX, double upY, double upZ),double eyeX, double eyeY, double eyez,
                      double centerX, double centerY, double centerZ,
                      double upX, double upY, double upZ) RMX_DEPRECATED(10_0, 10_10, "Use RMXGLMakeLookAt");
-void RMXGLMakeLookAt(RMXCamera * view);
+int RMXGLMakeLookAt(RMXCamera * view);
 
 void RMXGLMaterialfv(int32_t a,int32_t b, GLKVector4 color);
 void RMXGLTranslate(RMXVector3 v);
@@ -33,4 +33,4 @@ void RMXGlutInit(int argc, char * argv[]);
 void RMXGlutInitDisplayMode(unsigned int mode);
 void RMXGlutEnterGameMode();
 void RMXGlutMakeWindow(int posx,int posy, int w, int h, const char * name);
-void RMXGLRegisterCallbacks(void *display,void *reshape);
+void RMXGLRegisterCallbacks(void (*display)(void),void (*reshape)(int,int));

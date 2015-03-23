@@ -31,8 +31,8 @@
         self.velocity = GLKVector3Make(0,0,0)
         self.acceleration = GLKVector3Make(0,0,0)
         self.forces = GLKVector3Make(0,0,0)
-        self.orientation = SCNMatrix4Identity
-        self.vMatrix = SCNMatrix4MakeScale(0,0,0)
+        self.orientation = GLKMatrix4Identity
+        self.vMatrix = GLKMatrix4MakeScale(0,0,0)
         self.parent = parent
     }
     
@@ -73,20 +73,20 @@
         RMXVector3SetX(&self.acceleration,0)
     }
 
-    var upVector: RMXVector3 {
-        return GLKVector3Make(Float(self.orientation.m12),Float(self.orientation.m22),Float(self.orientation.m32))
+    var upVector: GLKVector4 {
+        return GLKMatrix4GetColumn(self.orientation, 1)
+//        return GLKVector3Make(Float(self.orientation.m12),Float(self.orientation.m22),Float(self.orientation.m32))
     }
     
-    var rightVector: RMXVector3 {
-        return GLKVector3Make(Float(-self.orientation.m11), Float(-self.orientation.m21), Float(-self.orientation.m31))
+    
+    var leftVector: GLKVector4 {
+        return GLKMatrix4GetColumn(self.orientation, 0)
+        //return GLKVector3Make(Float(self.orientation.m11),Float(self.orientation.m21),Float(self.orientation.m31))
     }
     
-    var leftVector: RMXVector3 {
-        return GLKVector3Make(Float(self.orientation.m11),Float(self.orientation.m21),Float(self.orientation.m31))
-    }
-    
-    var forwardVector: RMXVector3 {
-        return GLKVector3Make(Float(self.orientation.m13),Float(self.orientation.m23),Float(self.orientation.m33))
+    var forwardVector: GLKVector4 {
+        return GLKMatrix4GetColumn(self.orientation, 2)
+        //return GLKVector3Make(Float(self.orientation.m13),Float(self.orientation.m23),Float(self.orientation.m33))
     }
     
     func distanceTo(object:RMXObject) -> Float{

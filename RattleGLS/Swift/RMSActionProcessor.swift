@@ -12,21 +12,24 @@ import Foundation
 public class RMSActionProcessor {
     let keys: RMSKeys = RMSKeys()
     var activeSprite: RMSParticle {
-        return self.world.activeSprite!
+        return self.world.observer
     }
-    var world: RMXWorld
+    var world: RMSWorld
     
-    init(world: RMXWorld){
+    init(world: RMSWorld){
         self.world = world
         RMXLog()
     }
     
     
-    func movement(speed: Float, action: String!, point: CGPoint? = nil){
+    func movement(action: String!, speed: Float = 0,  point: [Float]){
         //if (keys.keyStates[keys.forward])  [observer accelerateForward:speed];
         if action == nil { return }
-        RMXLog("\n\(action!) \(speed), \(self.world.activeSprite!.body.position.z)\n")
         
+        if action == "move" && point.count == 2 {
+            self.activeSprite.body.accelerateForward(point[1] * speed)
+            self.activeSprite.body.accelerateLeft(point[0] * speed)
+        }
         if (action == "forward") {
             if speed == 0 {
                 self.activeSprite.body.forwardStop()
@@ -93,12 +96,12 @@ public class RMSActionProcessor {
         }
         
         
-        if action == "look" && point != nil {
-            self.activeSprite.plusAngle(point!, speed: speed)
-            RMXLog(self.activeSprite.camera!.viewDescription)
+        if action == "look" && point.count == 2 {
+            self.activeSprite.plusAngle(point[0]*speed, y: point[1]*speed)
         }
 //        else {
 //            [RMXGLProxy.activeSprite.mouse setMousePos:x y:y];
+        RMXLog("\(self.activeSprite.camera!.viewDescription)\n\(action!) \(speed), \(self.world.activeSprite!.body.position.z)\n")
     }
 
 }

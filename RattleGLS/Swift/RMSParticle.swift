@@ -10,22 +10,24 @@ import Foundation
 
 
 @objc public protocol RMXParticle {
-    var mouse: RMXMouse? { get }
-    var actions: RMXSpriteActions? { get }
-    var camera: RMXCamera? { get }
+//    var mouse: RMXMouse? { get }
+//    var actions: RMXSpriteActions? { get }
+//    var camera: RMXCamera? { get set }
     var body: RMSPhysicsBody { get }
-    //func toggleGravity()
+    func toggleGravity()
+    func plusAngle(point: [Float], speed: Float)
+    func animate()
 }
 
-public class RMSParticle : RMXObject, RMXParticle {
+public class RMSParticle : RMXObject {
     var behaviours: [() -> ()]
     public enum RMXParticleType { case OBSERVER, SHAPE, SIMPLE_PARTICLE, WORLD }
-    @objc public var mouse: RMXMouse?
-    @objc public var actions: RMXSpriteActions?
+    var mouse: RMXMouse?
+    var actions: RMXSpriteActions?
     private var ignoreNextjump: Bool = false
     var type: RMXParticleType = .SIMPLE_PARTICLE
     
-    @objc public var camera: RMXCamera?
+    var camera: RMXCamera?
     var physics: RMXPhysics? {
         return self.world?.physics
     }
@@ -47,7 +49,7 @@ public class RMSParticle : RMXObject, RMXParticle {
     var isRotating = false
     //static var COUNT: Int = 0
     
-    init(world:RMXWorld?,  parent:RMXObject! = nil, name: String = "RMSParticle")
+    init(world:RMSWorld?,  parent:RMXObject! = nil, name: String = "RMSParticle")
     {
         self.actions = RMXSpriteActions()
         self.behaviours = Array<() -> ()>()
@@ -98,7 +100,7 @@ public class RMSParticle : RMXObject, RMXParticle {
             self.actions!.reach = 2 * self.actions!.armLength;
             self.body.mass = 9
             self.body.radius = 10
-            self.body.position = GLKVector3Make(20,self.body.radius,20)
+            self.body.position = GLKVector3Make(0,self.body.radius,-20)
             self.hasGravity = true
            
         })
@@ -107,7 +109,7 @@ public class RMSParticle : RMXObject, RMXParticle {
         return self
     }
     
-    public class func New(world: RMXWorld! = nil, parent: RMXObject! = nil) -> RMSParticle {
+    public class func New(world: RMSWorld! = nil, parent: RMXObject! = nil) -> RMSParticle {
         return RMSParticle(world: world, parent: parent)
         
     }
@@ -181,15 +183,15 @@ public class RMSParticle : RMXObject, RMXParticle {
         //    self.body.forces.z += g.z + n.z;
         
         
-        self.body.forces = RMXVector3Add(forces,RMXMatrix4MultiplyVector3( RMXMatrix4Transpose(self.body.orientation),self.body.acceleration));
-        self.body.velocity = RMXVector3Add(self.body.velocity,self.body.forces);
+        self.body.forces = GLKVector3Add(forces,RMXMatrix4MultiplyVector3( GLKMatrix4Transpose(self.body.orientation),self.body.acceleration));
+        self.body.velocity = GLKVector3Add(self.body.velocity,self.body.forces);
     
     
     
         self.world!.collisionTest(self)
         
         self.applyLimits()
-        self.body.position = RMXVector3Add(self.body.position,self.body.velocity);
+        self.body.position = GLKVector3Add(self.body.position,self.body.velocity);
     
     }
     
@@ -206,10 +208,11 @@ public class RMSParticle : RMXObject, RMXParticle {
         self.body.velocity = RMXVector3Zero()
     }
     
-    func plusAngle(point: NSPoint, speed: Float){
-        self.plusAngle(Float(point.x) * -speed, y: Float(point.y) * speed)
+    func plusAngle(point: [Float], speed: Float){
+        RMXLog(point[0])
+        self.plusAngle(point[0] * -speed, y: point[1] * speed)
     }
-    public override func plusAngle(var x:Float, var y:Float) {
+    public override func plusAngle(x:Float, y:Float) {
         super.plusAngle(x, y: y)
         //body.position.z += theta; return;
         let theta = x * -self.rotationSpeed * PI_OVER_180
@@ -227,8 +230,8 @@ public class RMSParticle : RMXObject, RMXParticle {
     
     
     
-        self.body.orientation = SCNMatrix4Rotate(self.body.orientation, CGFloat(theta), 0, 1, 0);
-        self.body.orientation = SCNMatrix4Rotate(self.body.orientation, CGFloat(phi), CGFloat(self.body.leftVector.x), CGFloat(self.body.leftVector.y), CGFloat(self.body.leftVector.z))
+        self.body.orientation = GLKMatrix4Rotate(self.body.orientation, theta, 0, 1, 0);
+        self.body.orientation = GLKMatrix4RotateWithVector4(self.body.orientation, phi, self.body.leftVector)
         
     }
     

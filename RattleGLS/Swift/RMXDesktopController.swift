@@ -10,10 +10,7 @@ import Foundation
 //import CoreMotion
 //import UIKit
 
-protocol RMXController {
-    var gameView: GameView { get set }
-    var scene: RMXWorld? { get }
-}
+
 
 public class RMXDesktopController : RMXController {
     var hRotation:Float = 0.0   //Horizontal angle
@@ -22,7 +19,7 @@ public class RMXDesktopController : RMXController {
     var dataIn: String = "No Data"
     var gameView: GameViewController
     var scene: RMXWorld? {
-        return gameView.
+        return gameView.world
     }
 
     init(gameView: GameViewController){

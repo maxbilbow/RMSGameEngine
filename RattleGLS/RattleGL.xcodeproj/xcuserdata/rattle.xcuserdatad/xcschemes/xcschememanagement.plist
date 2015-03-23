@@ -4,15 +4,105 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>RMS SceneKit.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>RMS SceneKitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>RMX-ES.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>RMXPhysicsBeta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Rattle Physics Beta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>RattleGL3.0.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RattleGLES.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>RattleGLS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5008DA3C1AB9F34E00565A28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5008DA541AB9F34E00565A28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>501204091ABA43E500F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5012041E1ABA43E500F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>501204301ABA44C200F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>501204411ABA44C200F4C075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>503203D81AB0A821000DD1FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>509B6C201ABDE9F900D4AF94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>509B6C351ABDE9F900D4AF94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6C7B506F1A9E7B2E00B140D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CF88B2E1ABFE6BE00450039</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6CF88B4A1ABFE6BE00450039</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -20,10 +20,10 @@ public class RMXArt : RMXObject {
     static let nillVector: [Float]       = [ 0  ,   0,  0,  0   ]
     
     
-    class func initializeTestingEnvironment() -> RMXWorld {
+    class func initializeTestingEnvironment() -> RMSWorld {
     
 
-        let world: RMXWorld = RMXWorld()
+        let world: RMSWorld = RMSWorld()
         
         //if (world.observer == nil ){ fatalError(__FUNCTION__) }
     
@@ -39,13 +39,13 @@ public class RMXArt : RMXObject {
         let axisColors = [colorBlue , colorRed , colorGreen]
         
         let ZX = RMSParticle(world: world)
-        ZX.shape!.setRenderer(DrawPlane)
+//        ZX.shape!.setRenderer(DrawPlane)
         ZX.shape!.color = GLKVector4Make(0.8,1.2,0.8,0.5)
         ZX.isAnimated = false
         ZX.body.position = GLKVector3Make(ZX.body.position.x, 0, ZX.body.position.z)
         world.insertSprite(ZX)
         
-        //RMXArt.drawAxis(world)
+        RMXArt.drawAxis(world)
         RMXArt.randomObjects(world)
         
 
@@ -54,10 +54,10 @@ public class RMXArt : RMXObject {
     }
     
     class func drawSphere(radius: Float){
-        RMXDrawSphere(radius)
+//        RMXDrawSphere(radius)
     }
     
-    class func drawAxis(world: RMXWorld) {//xCol y:(float*)yCol z:(float*)zCol{
+    class func drawAxis(world: RMSWorld) {//xCol y:(float*)yCol z:(float*)zCol{
     
     //BOOL gravity = false;
         let shapeRadius: Float = 10
@@ -90,7 +90,7 @@ public class RMXArt : RMXObject {
                     object.body.radius = shapeRadius
                     object.body.position = position
                     object.shape!.visible = true
-                    //object.shape?.setRenderer(DrawCubeWithTextureCoords)
+//                    object.shape?.setRenderer(DrawCubeWithTextureCoords)
                    
             
                     object.shape!.color = GLKVector4Make(color[0], color[1], color[2], color[3])
@@ -106,10 +106,10 @@ public class RMXArt : RMXObject {
         drawAxis("z")
     }
     
-    class func randomObjects(world: RMXWorld )    {
+    class func randomObjects(world: RMSWorld )    {
     //int max =100, min = -100;
     //BOOL gravity = true;
-        let noOfShapes: Int32 = 10
+        let noOfShapes: Int32 = 2000
         
         for(var i: Int32 = -noOfShapes / 2; i < noOfShapes / 2; ++i) {
             var randPos: [Float]
@@ -133,11 +133,11 @@ public class RMXArt : RMXObject {
 //                object.shape.makeAsSun(rDist: 0, isRotating:false)
 //            }
         
-//        if(random() % 50 == 1) {
-//            object.shape!.setRenderer(self.drawSphere)
-//        } else {
+        if(random() % 50 == 1) {
+            object.shape!.setRenderer(self.drawSphere)
+        } else {
 //            object.shape!.setRenderer(DrawCubeWithTextureCoords)
-//        }
+        }
         
         object.hasGravity = false //(rand()% 100) == 1
         object.body.radius = Float(random() % 3 + 2)

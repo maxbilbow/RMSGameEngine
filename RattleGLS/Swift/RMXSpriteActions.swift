@@ -37,7 +37,9 @@ import Foundation
         if self.item != nil {
             self.item!.isAnimated = true
             self.item!.hasGravity = _itemHadGravity
-            self.item!.body.velocity = RMXVector3Add3(self.body.velocity,RMXVector3MultiplyScalar(self.body.forwardVector,strength),RMXVector3Zero())
+            let fwd4 = self.body.forwardVector
+            let fwd3 = GLKVector3Make(fwd4.x, fwd4.y, fwd4.z)
+            self.item!.body.velocity = RMXVector3Add3(self.body.velocity,RMXVector3MultiplyScalar(fwd3,strength),RMXVector3Zero())
             self.item = nil
         } else {
             return
@@ -46,7 +48,9 @@ import Foundation
     
     func manipulate() {
         if self.item != nil {
-            self.item?.body.position = RMXVector3Add(self.sprite.viewPoint, RMXVector3MultiplyScalar(self.body.forwardVector, self.armLength + self.item!.body.radius + self.body.radius))
+            let fwd4 = self.body.forwardVector
+            let fwd3 = GLKVector3Make(fwd4.x, fwd4.y, fwd4.z)
+            self.item?.body.position = RMXVector3Add(self.sprite.viewPoint, RMXVector3MultiplyScalar(fwd3, self.armLength + self.item!.body.radius + self.body.radius))
         }
     }
     
