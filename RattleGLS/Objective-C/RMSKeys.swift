@@ -9,6 +9,16 @@
 import Foundation
 
 
+/**
+@brief Simple class for storing, chaning and managing keyboard controls
+@discussion other commands may be implemented later.
+@param: With this you can describe a parameter of a method or function. You can have multiple such tags.
+@return: Use it to specify the return value of a method or function.
+@see: Use it to indicate other related method or functions. You can have multiple such tags.
+@sa: Similar to the previous one.
+@code: With this tag, you can embed code snippets in the documentation. When viewing the documentation in Help Inspector, the code is represented with a different font, inside a special box. Always use the @endcode tag when you finish writing code.
+@remark: Use it to highlight any special facts about the code you’re currently documenting.
+*/
 public class RMSKeys {
     
     var keys: [ RMKey ]?

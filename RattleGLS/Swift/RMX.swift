@@ -12,5 +12,5 @@ import Foundation
     static let isDebugging: Bool = true
     static let isFullscreen: Bool = false
     static let usingDepreciated: Bool = false
-    static let usingSceneKit: Bool = true
+    static let usingSceneKit: Bool = false
 }

@@ -10,6 +10,9 @@
 #import <RattleGL-Swift.h>
 #import "RMXMouseProcessor.h"
 #import "RMXKeyboardProcessor.h"
+#import <GLUT/GLUT.h>
+#import <OpenGL/OpenGL.h>
+#import <GLKit/GLKit.h>
 #define TEXTURE_ID_CUBE 1
 @class RMXGLProxy, RMX;
 void InitGraphics(void)

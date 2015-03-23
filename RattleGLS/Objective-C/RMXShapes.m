@@ -7,6 +7,7 @@
 //
 
 #import "RattleGLS-Bridging-Header.h"
+#import <GLUT/GLUT.h>
 
 static GLfloat g_fTeapotAngle2 = 0.0;
 //static GLfloat g_fViewDistance = 3 * VIEWING_DISTANCE_MIN;

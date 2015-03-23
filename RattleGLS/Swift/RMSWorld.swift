@@ -33,7 +33,7 @@ import Foundation
         self.sprites.reserveCapacity(capacity)
         
         super.init(world: nil, parent: parent, name: name)
-        self.body.radius = 50
+        self.body.radius = 1000
 
         
         self.camera = RMXCamera(world: self, pov: observer)

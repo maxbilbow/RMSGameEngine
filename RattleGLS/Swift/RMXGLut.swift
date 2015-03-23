@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import GLKit
+import GLUT
 
 public protocol RMXGLView  {
 //    var effect: GLKBaseEffect? { get set }

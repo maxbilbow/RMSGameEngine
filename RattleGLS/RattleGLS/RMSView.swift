@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import OpenGL
+
 
 
 class RMSView : NSView {

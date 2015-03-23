@@ -18,7 +18,7 @@ import Foundation
 
 
 //@NSApplicationMain
-public class RMXScene : SCNScene, NSApplicationDelegate {
+public class RMXGLContext : NSOpenGLContext {
     
     var world: RMXWorld?
     var activeCamera: RMXCamera? {
@@ -43,9 +43,6 @@ public class RMXScene : SCNScene, NSApplicationDelegate {
         let world: RMXWorld = RMXArt.initializeTestingEnvironment()
         RMXLog("BUILDING")
         autoreleasepool {
-            world.sprites[2].shape!.node = self.rootNode.childNodeWithName("ship1", recursively: true)!
-            world.sprites[2].body.position = RMXVector3Zero()
-            world.sprites[2].shape?.draw()
             for sprite in world.sprites {
                 if sprite.rmxID != world.observer.rmxID {
                     
@@ -87,6 +84,10 @@ public class RMXScene : SCNScene, NSApplicationDelegate {
         }
         self.world = world
         return world
+    }
+    public override func update() {
+        super.update()
+        RMXLog()
     }
     
 }

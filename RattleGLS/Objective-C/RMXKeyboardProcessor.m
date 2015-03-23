@@ -9,6 +9,7 @@
 
 #import "RattleGLS-Bridging-Header.h"
 #import <RattleGL-Swift.h>
+#import <GLUT/GLUT.h>
 @class RMX, RMXGLProxy;
 
 struct KeyProcessor {

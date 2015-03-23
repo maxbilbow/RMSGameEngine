@@ -9,12 +9,12 @@
 import SceneKit
 import QuartzCore
 
-class GameViewController: NSViewController, SCNSceneRendererDelegate {
+class GameViewController: NSViewController {
     
     @IBOutlet weak var gameView: GameView!
     
-    var cameraNode: SCNNode! = nil
-    
+
+    /*
     func renderer(aRenderer: SCNSceneRenderer, updateAtTime time: NSTimeInterval) {
         if self.gameView != nil && self.gameView.camera?.pov != nil {
             self.gameView.update()///.camera?.updateSCNView(gameView: self.gameView)
@@ -32,52 +32,57 @@ class GameViewController: NSViewController, SCNSceneRendererDelegate {
             RMXLog("--- Warning: observer may not be initialised")
         }
     }
-    
+    */
     override func awakeFromNib(){
         // create a new scene
-        let scene = RMXScene(named: "art.scnassets/ship.dae")!
-        
-        // create and add a camera to the scene
-        let cameraNode = SCNNode()
-        cameraNode.camera = SCNCamera()
-        scene.rootNode.addChildNode(cameraNode)
-        self.cameraNode = cameraNode
-        // place the camera
-        //cameraNode.position = SCNVector3FromGLKVector3((scene.camera?.position)!)
-    
-       
-        // create and add a light to the scene
-        let lightNode = SCNNode()
-        lightNode.light = SCNLight()
-        lightNode.light!.type = SCNLightTypeOmni
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 10)
-        scene.rootNode.addChildNode(lightNode)
-        
-        // create and add an ambient light to the scene
-        let ambientLightNode = SCNNode()
-        ambientLightNode.light = SCNLight()
-        ambientLightNode.light!.type = SCNLightTypeAmbient
-        ambientLightNode.light!.color = NSColor.darkGrayColor()
-        scene.rootNode.addChildNode(ambientLightNode)
-        
-//         retrieve the ship node
-        let ship = scene.rootNode.childNodeWithName("ship", recursively: true)!
-        // animate the 3d object
-        ship.runAction(SCNAction.repeatActionForever(SCNAction.rotateByX(0, y: 2, z: 0, duration: 1000)))
-        
-                // set the scene to the view
-        self.gameView!.scene = scene
+        let scene: RMXGLContext = RMXGLContext()
         scene.buildScene()
-        // allows the user to manipulate the camera
-        self.gameView!.allowsCameraControl = false
+        self.gameView!.openGLContext = scene
         
-        // show statistics such as fps and timing information
-        self.gameView!.showsStatistics = true
+        //(1) Allocate and initialize an instance of GLKBaseEffect
         
-        // configure the view
-        self.gameView!.backgroundColor = NSColor.blackColor()
-        self.gameView!.delegate = self
-//        scene.activeCamera?.updateSCNView(gameView: self.gameView)
+        let directionalLightEffect = GLKBaseEffect()
+        
+        //(2) Set the desired properties on the effect
+        
+        // Configure light0
+        directionalLightEffect.light0.position = GLKVector4Make(10,10,20,1)
+//        directionalLightEffect.light0.diffuseColor = diffuseColor
+//        directionalLightEffect.light0.ambientColor = ambientColor
+        
+        // Configure material
+        //directionalLightEffect.material.diffuseColor = materialDiffuseColor;
+//        directionalLightEffect.material.ambientColor = materialAmbientColor;
+//        directionalLightEffect.material.specularColor = materialSpecularColor;
+        directionalLightEffect.material.shininess = 10.0
+        
+       // (3) Initialize vertex attribute / vertex array state preferrably with a vertex array object
+        //for the model or scene to be drawn.
+        
+//        glGenVertexArraysOES(1, &vaoName)
+//        glBindVertexArrayOES(vaoName)
+        
+        // Create and initialize VBO for each vertex attribute
+        // The example below shows an example of setup up the position vertex attribute.
+        // Repeat the steps below for each additional desired attribute: normal, color, texCoord0, texCoord1.
+        
+//        glGenBuffers(1, &positionVBO);
+//        glBindBuffer(GL_ARRAY_BUFFER, positionVBO);
+//        glBufferData(GL_ARRAY_BUFFER, vboSize, dataBufPtr, GL_STATIC_DRAW);
+//        glVertexAttribPointer(GLKVertexAttribPosition, size, type, normalize, stride, NULL);
+//        glEnableVertexAttribArray(GLKVertexAttribPosition);
+//        
+        //... repeat the steps above for other desired vertex attributes
+        
+//        glBindVertexArrayOES(0) // unbind the VAO we created above
+        
+//        (4) For each frame drawn:  Update properties that change per frame.  Synchronize the changed effect state
+//        by calling -[GLKBaseEffect prepareToDraw].  Draw the model with the effect
+        
+        //directionalLightEffect.transform.modelviewMatrix = modelviewMatrix;
+        directionalLightEffect.prepareToDraw()
+//        glBindVertexArrayOES(vaoName)
+//        glDrawArrays(GL_TRIANGLE_STRIP, 0, vertCt)
     }
 
     

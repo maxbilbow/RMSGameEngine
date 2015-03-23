@@ -8,13 +8,13 @@
 
 import SceneKit
 
-class GameView: SCNView {
+class GameView: NSOpenGLView {
     
     var keys: RMSKeys {
         return self.world.action.keys
     }
     var world: RMXWorld {
-        return (self.scene as! RMXScene).world!
+        return (self.openGLContext as! RMXGLContext).world!
     }// = RMXArt.initializeTestingEnvironment()
 
     var camera: RMXCamera? {
@@ -24,6 +24,11 @@ class GameView: SCNView {
         return world.activeSprite
     }
     
+    override func display() {
+        self.world.animate()
+        RMXLog()
+        super.display()
+    }
     override func keyDown(theEvent: NSEvent) {
         let keys = self.keys.match(theEvent.characters!)
         var s = theEvent.characters!
@@ -42,6 +47,7 @@ class GameView: SCNView {
             RMXGLProxy.itemBody.radius -= 0.5;
         }
 */
+        super.keyDown(theEvent)
     }
 
     
@@ -172,20 +178,26 @@ class GameView: SCNView {
     }
     
 
-    func update() {
+    override func update() {
         //self.camera?.updateSCNView(gameView: self)
 //        self.camera?.updateSCNView(gameView: self)
         self.world.animate()
         
-        self.pointOfView!.position = (self.camera?.position)!
-        let q = ((self.camera?.orientation)!)
-        self.pointOfView!.orientation = SCNVector4Make(CGFloat(q.x), CGFloat(q.y), CGFloat(q.z), CGFloat(q.w))
-        //self.pointOfView!.camera?.setProjectionTransform(SCNMatrix4FromGLKMatrix4(GLKMatrix4Transpose((self.camera?.modelViewMatrix)!)))
-        
+       RMXLog()
+        super.update()
     }
-
+    override func prepareOpenGL() {
+        RMXLog()
+        super.prepareOpenGL()
+    }
+    
+    override func rightMouseUp(theEvent: NSEvent) {
+        RMXLog("\(theEvent.buttonNumber)")
+        self.sprite?.actions?.throwItem(5)
+        super.rightMouseUp(theEvent)
+    }
     override func needsToDrawRect(aRect: NSRect) -> Bool {
-        //self.update()
+        self.update()
         //RMXLog(self.camera?.viewDescription)
         return super.needsToDrawRect(aRect)
     }

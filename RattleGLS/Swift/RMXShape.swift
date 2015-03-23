@@ -7,6 +7,8 @@
 //
 
 import Foundation
+//import OpenGL
+//import GLUT
 
 //@objc public protocol RMXRenderable {
 //    var render: CFunctionPointer<(Float)->Void> { get set }
