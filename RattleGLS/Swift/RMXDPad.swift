@@ -159,6 +159,10 @@ func RMXLog(message: String,sender: String = __FUNCTION__) {
 //        lp.minimumPressDuration = 
         gvc.view.addGestureRecognizer(lp)
         
+        let tt: UITapGestureRecognizer = UITapGestureRecognizer(target: self,  action: "handleTripleTap:")
+        tt.numberOfTapsRequired = 3
+        gvc.view.addGestureRecognizer(tt)
+        
     }
     var i: Int = 0
     func update() {
@@ -173,6 +177,11 @@ func RMXLog(message: String,sender: String = __FUNCTION__) {
     
     func handleDoubleTap(recognizer: UITapGestureRecognizer) {
         RMXLog("Double Tap")
+        self.world.action(action: "toggleGravity")
+    }
+    
+    func handleTripleTap(recognizer: UITapGestureRecognizer) {
+        RMXLog("Triple Tap")
         self.world.reset()
     }
     

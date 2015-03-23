@@ -29,7 +29,7 @@ import Foundation
     
     
     
-    public override func getPosition() -> RMXVector3? {
+    override var position: RMXVector3 {
         return GLKVector3Make(Float(pos.x), Float(pos.y), 0)
     }
     

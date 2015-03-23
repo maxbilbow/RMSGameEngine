@@ -77,4 +77,10 @@ extension CGFloat {
         return RMXValue.toData(self, dp: dp)
     }
 }
+
+extension GLKVector3 {
+    var print: String {
+        return "\(x.toData()) \(y.toData()) \(z.toData())"
+    }
+}
     

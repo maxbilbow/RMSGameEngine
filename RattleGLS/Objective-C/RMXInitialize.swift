@@ -36,7 +36,7 @@ extension RMX {
                         sprite.addBehaviour({
                             if !sprite.hasGravity && world.observer.actions!.item != nil {
                                 if sprite.body.distanceTo((world.observer.actions?.item)!) < 50 {
-                                    sprite.hasGravity = true
+                                    sprite.setHasGravity(true)
                                 }
                             }
                         })

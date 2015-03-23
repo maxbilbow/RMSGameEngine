@@ -86,12 +86,12 @@ public class RMXArt : RMXObject {
                 point += step
                 let object:RMSParticle = RMSParticle(world: world)
                 object.addInitCall( {
-                    object.hasGravity = false
+                    object.setHasGravity(false)
                     object.body.radius = shapeRadius
                     object.body.position = position
                     object.shape!.visible = true
 //                    object.shape?.setRenderer(DrawCubeWithTextureCoords)
-                   
+                    object.shape!.node = Vertex()
             
                     object.shape!.color = GLKVector4Make(color[0], color[1], color[2], color[3])
                     object.isAnimated = false
@@ -137,9 +137,10 @@ public class RMXArt : RMXObject {
             object.shape!.setRenderer(self.drawSphere)
         } else {
 //            object.shape!.setRenderer(DrawCubeWithTextureCoords)
+            object.shape?.node = Vertex()
         }
         
-        object.hasGravity = false //(rand()% 100) == 1
+        object.setHasGravity(false) //(rand()% 100) == 1
         object.body.radius = Float(random() % 3 + 2)
         object.body.position = GLKVector3Make(randPos[0], randPos[1], randPos[2])
         object.body.mass = Float(random()%15+2)/10;

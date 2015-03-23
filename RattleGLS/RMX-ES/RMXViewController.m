@@ -10,16 +10,14 @@
 #import "GameViewController.h"
 #import <OpenGLES/ES2/glext.h>
 #import "Geometry.h"
-@class RMXDPad;
-
-
+@class RMXDPad, RMSGeometry;
 @interface GameViewController (){
     RMXDPad * _dPad;
     EAGLContext* _context;
     GLKBaseEffect* _effect;
     GLuint _vertexBuffer;
     GLuint _indexBuffer;
-    GLuint _vertexArray;
+    GLuint *_vertexArray;
 //    GLKMatrix3 _normalMatrix;
     BOOL _initialized;
 }
@@ -139,12 +137,12 @@
     
     
     // Create Vertex Array Buffer For Vertex Array Objects
-    glGenVertexArraysOES(1, &_vertexArray);
-    glBindVertexArrayOES(_vertexArray);
+    glGenVertexArraysOES(1, &_vertexArray[0]);
+    glBindVertexArrayOES(_vertexArray[0]);
     
     
     // All of the following configuration for per vertex data is stored into the VAO
-    
+//    for (int i = 0; i<5; ++i ){
     // setup vertex buffer - what are my vertices?
     glGenBuffers(1, &_vertexBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, _vertexBuffer);
@@ -178,7 +176,7 @@
     
     // were done so unbind the VAO
     glBindVertexArrayOES(0);
-
+    
 }
 
 - (void)tearDownGL {
@@ -187,7 +185,7 @@
     
     glDeleteBuffers(1, &_vertexBuffer);
     glDeleteBuffers(1, &_indexBuffer);
-    glDeleteVertexArraysOES(1, &_vertexArray);
+    glDeleteVertexArraysOES(1, &_vertexArray[0]);
     _effect = nil;
     
 }
@@ -217,7 +215,7 @@
     
     GLKMatrixStackPush(matrixStack);
     self.modelMatrix = GLKMatrixStackGetMatrix4(matrixStack);
-    glBindVertexArrayOES(_vertexArray);
+    glBindVertexArrayOES(_vertexArray[0]);
     [self prepareEffectWithModelMatrix:self.modelMatrix viewMatrix:self.viewMatrix projectionMatrix:self.projectionMatrix];
     glDrawElements(GL_TRIANGLES, sizeof(IndicesTrianglesCube) / sizeof(IndicesTrianglesCube[0]), GL_UNSIGNED_BYTE, 0);
     glBindVertexArrayOES(0);

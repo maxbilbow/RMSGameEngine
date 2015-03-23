@@ -15,6 +15,7 @@ import Foundation
 public class RMXShape {
     
     var node: Vertex?
+    
     var color: GLKVector4 = GLKVector4Make(0,0,0,0)
     var isLight: Bool = false
     var type, gl_light: Int32
@@ -42,8 +43,8 @@ public class RMXShape {
     func makeAsSun(rDist: Float = 1000, isRotating: Bool = true){
         self.parent.rotationCenterDistance = rDist
         self.parent.isRotating = isRotating
-        self.parent.rotationSpeed = 1
-        self.parent.hasGravity = false //TODO check
+        self.parent.setRotationSpeed(speed: 1)
+        self.parent.setHasGravity(false)
         self.isLight = true
         
     }

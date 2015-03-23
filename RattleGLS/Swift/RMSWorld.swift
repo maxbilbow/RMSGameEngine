@@ -143,7 +143,7 @@ public class RMSWorld : RMSParticle, RMXWorld {
     override public func toggleGravity() {
         for sprite in sprites {
             if !(sprite.isLightSource) {
-                sprite.hasGravity = self.hasGravity
+                sprite.setHasGravity(self.hasGravity)
             }
         }
         super.toggleGravity()
@@ -179,5 +179,7 @@ public class RMSWorld : RMSParticle, RMXWorld {
     func action(action: String = "reset",speed: Float = 0, point: [Float] = []) {
         self._action.movement( action,speed: speed, point: point)
     }
+    
+   
     
 }

@@ -30,6 +30,10 @@ public class RMSActionProcessor {
             self.activeSprite.body.accelerateForward(point[1] * speed)
             self.activeSprite.body.accelerateLeft(point[0] * speed)
         }
+        if action == "look" && point.count == 2 {
+            self.activeSprite.plusAngle(point[0]*speed, y: point[1]*speed)
+        }
+        
         if (action == "forward") {
             if speed == 0 {
                 self.activeSprite.body.forwardStop()
@@ -96,9 +100,7 @@ public class RMSActionProcessor {
         }
         
         
-        if action == "look" && point.count == 2 {
-            self.activeSprite.plusAngle(point[0]*speed, y: point[1]*speed)
-        }
+        
 //        else {
 //            [RMXGLProxy.activeSprite.mouse setMousePos:x y:y];
         RMXLog("\(self.activeSprite.camera!.viewDescription)\n\(action!) \(speed), \(self.world.activeSprite!.body.position.z)\n")

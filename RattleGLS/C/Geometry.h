@@ -29,3 +29,5 @@ extern const Vertex VerticesCube[24];
 extern const GLubyte IndicesTrianglesCube[36];
 
 #endif
+
+Vertex* RMXMakeCubeVertex();

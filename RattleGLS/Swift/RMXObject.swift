@@ -14,7 +14,9 @@ public class RMXObject {
     private var _name: String
     var parent: RMXObject?
     var world: RMSWorld?
+    var body: RMSPhysicsBody! = nil
     var resets: [() -> () ]
+    var behaviours: [() -> ()]
     var name: String {
         return "\(_name): \(self.rmxID)"
     }
@@ -25,7 +27,7 @@ public class RMXObject {
         _name = name
         RMXObject.COUNT++
         self.resets = Array<() -> ()>()
-        
+        self.behaviours = Array<() -> ()>()
         self.resets.append({ println("INIT: \(name), \(self.rmxID)")})
         
     }
@@ -48,10 +50,16 @@ public class RMXObject {
         }
     }
    
-    func plusAngle(x: Float,y:Float) {  }
+    func plusAngle(x: Float,y:Float,z:Float = 0) {
+        if self.body != nil {
+            self.body.plusAngle(x, y: y, z: z)
+        }
+    }
     
     func debug() {}
     
-    public func getPosition() -> RMXVector3? { return nil }
+    var position: RMXVector3 {
+        return self.body.position ?? RMXVector3Zero()
+    }
 }
 

@@ -20,54 +20,44 @@ import Foundation
 }
 
 public class RMSParticle : RMXObject {
-    var behaviours: [() -> ()]
+ 
     public enum RMXParticleType { case OBSERVER, SHAPE, SIMPLE_PARTICLE, WORLD }
     var mouse: RMXMouse?
     var actions: RMXSpriteActions?
-    private var ignoreNextjump: Bool = false
     var type: RMXParticleType = .SIMPLE_PARTICLE
     
     var camera: RMXCamera?
     var physics: RMXPhysics? {
         return self.world?.physics
     }
-    @objc lazy public var body: RMSPhysicsBody = RMSPhysicsBody(parent: self)
+    //@objc lazy public var body: RMSPhysicsBody = RMSPhysicsBody(parent: self)
     var shape: RMXShape?
     var anchor = RMXVector3Zero()
-
+    
+    //Set automated rotation (used mainly for the sun)
+    ///@todo create a behavior protocal/class instead of fun pointers.
     var rAxis = RMXVector3Zero()
     var rotation:Float = 0
     var rotationCenterDistance:Float = 0
-    
-    var accelerationRate:Float = 0
-
-    
-    var rotationSpeed:Float = 0
-    var hasFriction = true
-    var hasGravity = false
-
     var isRotating = false
     //static var COUNT: Int = 0
     
     init(world:RMSWorld?,  parent:RMXObject! = nil, name: String = "RMSParticle")
     {
-        self.actions = RMXSpriteActions()
-        self.behaviours = Array<() -> ()>()
         super.init(parent:parent, world:world, name: name)
+        self.actions = RMXSpriteActions(parent: self)
+        self.body = RMSPhysicsBody(parent: self)
         //RMSParticle.COUNT++
         self.actions!.parent = self
         self.mouse = RMXMouse(parent:self, world:self.world)
-        self.body = RMSPhysicsBody(parent: self)
-        self.shape = RMXShape(parent: self, world:self.world)
-        self.actions = RMXSpriteActions(parent: self, world: self.world)
-        self.camera = RMXCamera(world: world, pov: self)
-        self.shape = RMXShape(parent: self, world: world)
         
+        self.camera = RMXCamera(world: world, pov: self)
         //Set up for basic particle
         self.resets.append({
-            self.accelerationRate = 0.4
+            self.body = RMSPhysicsBody(parent: self)
+            self.shape = RMXShape(parent: self, world:self.world)
+            self.actions = RMXSpriteActions(parent: self)
             self.anchor = GLKVector3Make(0,0,0)
-            self.rotationSpeed = -0.1
             self.isAnimated = true
             self.rAxis = GLKVector3Make(0,0,1)
             self.rotation = 0
@@ -101,7 +91,7 @@ public class RMSParticle : RMXObject {
             self.body.mass = 9
             self.body.radius = 10
             self.body.position = GLKVector3Make(0,self.body.radius,-20)
-            self.hasGravity = true
+            self.setHasGravity(true)
            
         })
         _asObserver = true
@@ -121,31 +111,26 @@ public class RMSParticle : RMXObject {
    
     
     var viewPoint: RMXVector3{
-        return RMXVector3Add(GLKVector3Make(Float(self.body.orientation.m11),Float(self.body.orientation.m21),Float(self.body.orientation.m31)),
-            self.body.position)
+        return RMXVector3Add(self.body.forwardVector,self.position)
     }
     
     var ground: Float {
         return self.body.radius - ( self.actions?.squatLevel ?? 0 )
     }
     
-    override public func getPosition() -> RMXVector3 {
-        return self.body.position
-    }
-    
     func animate() {
         if self.isAnimated {
             self.actions?.jumpTest()
-            self.accelerate()
+            self.body.animate()
             self.actions?.manipulate()
             for behaviour in self.behaviours {
                 behaviour()
             }
         }
     
-    
+    ///add this as a behaviour (create the variables outside of function before adding)
         if self.isRotating {
-            self.rotation += self.rotationSpeed/self.rotationCenterDistance
+            self.rotation += self.body.rotationSpeed/self.rotationCenterDistance
             var temp = RMXSomeCircle(Float(self.rotation), Float(self.rotationCenterDistance) * 2)
             self.body.position = GLKVector3Make(temp.x - self.rotationCenterDistance,temp.y,0)
         }
@@ -158,44 +143,7 @@ public class RMSParticle : RMXObject {
     //float total, previousUV, previousLV = 0;
     
     
-    func accelerate()    {
-    //GLKVector3 upThrust = GLKVector3Make( 0,0,0 );
-        let g = (self.hasGravity) ? self.world!.physics!.gravityFor(self) : RMXVector3Zero()
-        let n = (self.hasGravity) ? self.world!.physics!.normalFor(self) : RMXVector3Zero()
-        let f = self.physics!.frictionFor(self)// : GLKVector3Make(1,1,1);
-        let d = self.physics!.dragFor(self)// : GLKVector3Make(1,1,1);
-    
-    
-        //#if TARGET_OS_IPHONE
-        //    self.body.velocity = GLKVector3DivideScalar(self.body.velocity, 1 );
-        //#else
-        self.body.velocity = RMXVector3DivideScalar(self.body.velocity, Float(1 + self.world!.µAt(self) + d.x))
-        
-        
-        let forces = GLKVector3Make(
-                            (g.x + /* d.x + f.x +*/ n.x),
-                            (g.y +/* d.y + f.y +*/ n.y),//+body.acceleration.y,
-                            (g.z +/* d.z + f.z +*/ n.z)
-                )
-        
-        //    self.body.forces.x += g.x + n.x;
-        //    self.body.forces.y += g.y + n.y;
-        //    self.body.forces.z += g.z + n.z;
-        
-        
-        self.body.forces = GLKVector3Add(forces,RMXMatrix4MultiplyVector3( GLKMatrix4Transpose(self.body.orientation),self.body.acceleration));
-        self.body.velocity = GLKVector3Add(self.body.velocity,self.body.forces);
-    
-    
-    
-        self.world!.collisionTest(self)
-        
-        self.applyLimits()
-        self.body.position = GLKVector3Add(self.body.position,self.body.velocity);
-    
-    }
-    
-    
+       
     
     private func applyLimits()
     {
@@ -212,28 +160,7 @@ public class RMSParticle : RMXObject {
         RMXLog(point[0])
         self.plusAngle(point[0] * -speed, y: point[1] * speed)
     }
-    public override func plusAngle(x:Float, y:Float) {
-        super.plusAngle(x, y: y)
-        //body.position.z += theta; return;
-        let theta = x * -self.rotationSpeed * PI_OVER_180
-        let phi = y * self.rotationSpeed * PI_OVER_180
-        
-        
-        //let lim = CGFloat(cos(0.0))
-//        if self.body.phi + phi < lim && self.body.phi + phi > -lim {
-//            self.body.phi += phi
-//            self.body.angles.phi = -lim;
-//        }
     
-        self.body.theta += theta
-        
-    
-    
-    
-        self.body.orientation = GLKMatrix4Rotate(self.body.orientation, theta, 0, 1, 0);
-        self.body.orientation = GLKMatrix4RotateWithVector4(self.body.orientation, phi, self.body.leftVector)
-        
-    }
     
     
     var isGrounded: Bool {
@@ -252,11 +179,11 @@ public class RMSParticle : RMXObject {
     
         
     func toggleGravity() {
-        self.hasGravity = !self.hasGravity
+        self.body.hasGravity = !self.body.hasGravity
     }
     
     func toggleFriction() {
-        self.hasFriction = !self.hasFriction
+        self.body.hasFriction = !self.body.hasFriction
     }
     
 
@@ -283,4 +210,26 @@ public class RMSParticle : RMXObject {
     
 
 
+}
+
+extension RMSParticle {
+    var hasGravity: Bool {
+        return self.body.hasGravity
+    }
+    
+    func setHasGravity(isTrue: Bool){
+        self.body.hasGravity = isTrue
+    }
+    
+    var hasFriction: Bool {
+        return self.body.hasFriction
+    }
+    
+    func setHasFriction(isTrue: Bool){
+        self.body.hasFriction = isTrue
+    }
+    
+    func setRotationSpeed(speed s: Float){
+        self.body.rotationSpeed = s
+    }
 }
